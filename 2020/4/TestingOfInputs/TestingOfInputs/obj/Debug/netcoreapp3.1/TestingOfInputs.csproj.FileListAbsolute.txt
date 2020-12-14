@@ -1,0 +1,13 @@
+C:\Users\Sebbe\Desktop\aoc\2020\4\TestingOfInputs\TestingOfInputs\bin\Debug\netcoreapp3.1\TestingOfInputs.exe
+C:\Users\Sebbe\Desktop\aoc\2020\4\TestingOfInputs\TestingOfInputs\bin\Debug\netcoreapp3.1\TestingOfInputs.deps.json
+C:\Users\Sebbe\Desktop\aoc\2020\4\TestingOfInputs\TestingOfInputs\bin\Debug\netcoreapp3.1\TestingOfInputs.runtimeconfig.json
+C:\Users\Sebbe\Desktop\aoc\2020\4\TestingOfInputs\TestingOfInputs\bin\Debug\netcoreapp3.1\TestingOfInputs.runtimeconfig.dev.json
+C:\Users\Sebbe\Desktop\aoc\2020\4\TestingOfInputs\TestingOfInputs\bin\Debug\netcoreapp3.1\TestingOfInputs.dll
+C:\Users\Sebbe\Desktop\aoc\2020\4\TestingOfInputs\TestingOfInputs\bin\Debug\netcoreapp3.1\TestingOfInputs.pdb
+C:\Users\Sebbe\Desktop\aoc\2020\4\TestingOfInputs\TestingOfInputs\obj\Debug\netcoreapp3.1\TestingOfInputs.csprojAssemblyReference.cache
+C:\Users\Sebbe\Desktop\aoc\2020\4\TestingOfInputs\TestingOfInputs\obj\Debug\netcoreapp3.1\TestingOfInputs.AssemblyInfoInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2020\4\TestingOfInputs\TestingOfInputs\obj\Debug\netcoreapp3.1\TestingOfInputs.AssemblyInfo.cs
+C:\Users\Sebbe\Desktop\aoc\2020\4\TestingOfInputs\TestingOfInputs\obj\Debug\netcoreapp3.1\TestingOfInputs.csproj.CoreCompileInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2020\4\TestingOfInputs\TestingOfInputs\obj\Debug\netcoreapp3.1\TestingOfInputs.dll
+C:\Users\Sebbe\Desktop\aoc\2020\4\TestingOfInputs\TestingOfInputs\obj\Debug\netcoreapp3.1\TestingOfInputs.pdb
+C:\Users\Sebbe\Desktop\aoc\2020\4\TestingOfInputs\TestingOfInputs\obj\Debug\netcoreapp3.1\TestingOfInputs.genruntimeconfig.cache

@@ -1,0 +1,13 @@
+C:\Users\Sebbe\Desktop\aoc\2020\12\aoc-12-2\aoc-12-2\obj\Debug\netcoreapp3.1\aoc-12-2.csprojAssemblyReference.cache
+C:\Users\Sebbe\Desktop\aoc\2020\12\aoc-12-2\aoc-12-2\obj\Debug\netcoreapp3.1\aoc-12-2.AssemblyInfoInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2020\12\aoc-12-2\aoc-12-2\obj\Debug\netcoreapp3.1\aoc-12-2.AssemblyInfo.cs
+C:\Users\Sebbe\Desktop\aoc\2020\12\aoc-12-2\aoc-12-2\obj\Debug\netcoreapp3.1\aoc-12-2.csproj.CoreCompileInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2020\12\aoc-12-2\aoc-12-2\bin\Debug\netcoreapp3.1\aoc-12-2.exe
+C:\Users\Sebbe\Desktop\aoc\2020\12\aoc-12-2\aoc-12-2\bin\Debug\netcoreapp3.1\aoc-12-2.deps.json
+C:\Users\Sebbe\Desktop\aoc\2020\12\aoc-12-2\aoc-12-2\bin\Debug\netcoreapp3.1\aoc-12-2.runtimeconfig.json
+C:\Users\Sebbe\Desktop\aoc\2020\12\aoc-12-2\aoc-12-2\bin\Debug\netcoreapp3.1\aoc-12-2.runtimeconfig.dev.json
+C:\Users\Sebbe\Desktop\aoc\2020\12\aoc-12-2\aoc-12-2\bin\Debug\netcoreapp3.1\aoc-12-2.dll
+C:\Users\Sebbe\Desktop\aoc\2020\12\aoc-12-2\aoc-12-2\bin\Debug\netcoreapp3.1\aoc-12-2.pdb
+C:\Users\Sebbe\Desktop\aoc\2020\12\aoc-12-2\aoc-12-2\obj\Debug\netcoreapp3.1\aoc-12-2.dll
+C:\Users\Sebbe\Desktop\aoc\2020\12\aoc-12-2\aoc-12-2\obj\Debug\netcoreapp3.1\aoc-12-2.pdb
+C:\Users\Sebbe\Desktop\aoc\2020\12\aoc-12-2\aoc-12-2\obj\Debug\netcoreapp3.1\aoc-12-2.genruntimeconfig.cache

@@ -1,0 +1,13 @@
+C:\Users\Sebbe\Desktop\aoc\2020\5\day5-alt\day5-alt\bin\Debug\netcoreapp3.1\day5-alt.exe
+C:\Users\Sebbe\Desktop\aoc\2020\5\day5-alt\day5-alt\bin\Debug\netcoreapp3.1\day5-alt.deps.json
+C:\Users\Sebbe\Desktop\aoc\2020\5\day5-alt\day5-alt\bin\Debug\netcoreapp3.1\day5-alt.runtimeconfig.json
+C:\Users\Sebbe\Desktop\aoc\2020\5\day5-alt\day5-alt\bin\Debug\netcoreapp3.1\day5-alt.runtimeconfig.dev.json
+C:\Users\Sebbe\Desktop\aoc\2020\5\day5-alt\day5-alt\bin\Debug\netcoreapp3.1\day5-alt.dll
+C:\Users\Sebbe\Desktop\aoc\2020\5\day5-alt\day5-alt\bin\Debug\netcoreapp3.1\day5-alt.pdb
+C:\Users\Sebbe\Desktop\aoc\2020\5\day5-alt\day5-alt\obj\Debug\netcoreapp3.1\day5-alt.csprojAssemblyReference.cache
+C:\Users\Sebbe\Desktop\aoc\2020\5\day5-alt\day5-alt\obj\Debug\netcoreapp3.1\day5-alt.AssemblyInfoInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2020\5\day5-alt\day5-alt\obj\Debug\netcoreapp3.1\day5-alt.AssemblyInfo.cs
+C:\Users\Sebbe\Desktop\aoc\2020\5\day5-alt\day5-alt\obj\Debug\netcoreapp3.1\day5-alt.csproj.CoreCompileInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2020\5\day5-alt\day5-alt\obj\Debug\netcoreapp3.1\day5-alt.dll
+C:\Users\Sebbe\Desktop\aoc\2020\5\day5-alt\day5-alt\obj\Debug\netcoreapp3.1\day5-alt.pdb
+C:\Users\Sebbe\Desktop\aoc\2020\5\day5-alt\day5-alt\obj\Debug\netcoreapp3.1\day5-alt.genruntimeconfig.cache

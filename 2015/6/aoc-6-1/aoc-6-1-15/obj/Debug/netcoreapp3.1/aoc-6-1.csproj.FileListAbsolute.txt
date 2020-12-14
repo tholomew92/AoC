@@ -1,0 +1,12 @@
+C:\Users\Sebbe\Desktop\aoc\2015\6\aoc-6-1\aoc-6-1-15\bin\Debug\netcoreapp3.1\aoc-6-1.exe
+C:\Users\Sebbe\Desktop\aoc\2015\6\aoc-6-1\aoc-6-1-15\bin\Debug\netcoreapp3.1\aoc-6-1.deps.json
+C:\Users\Sebbe\Desktop\aoc\2015\6\aoc-6-1\aoc-6-1-15\bin\Debug\netcoreapp3.1\aoc-6-1.runtimeconfig.json
+C:\Users\Sebbe\Desktop\aoc\2015\6\aoc-6-1\aoc-6-1-15\bin\Debug\netcoreapp3.1\aoc-6-1.runtimeconfig.dev.json
+C:\Users\Sebbe\Desktop\aoc\2015\6\aoc-6-1\aoc-6-1-15\bin\Debug\netcoreapp3.1\aoc-6-1.dll
+C:\Users\Sebbe\Desktop\aoc\2015\6\aoc-6-1\aoc-6-1-15\bin\Debug\netcoreapp3.1\aoc-6-1.pdb
+C:\Users\Sebbe\Desktop\aoc\2015\6\aoc-6-1\aoc-6-1-15\obj\Debug\netcoreapp3.1\aoc-6-1.AssemblyInfoInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2015\6\aoc-6-1\aoc-6-1-15\obj\Debug\netcoreapp3.1\aoc-6-1.AssemblyInfo.cs
+C:\Users\Sebbe\Desktop\aoc\2015\6\aoc-6-1\aoc-6-1-15\obj\Debug\netcoreapp3.1\aoc-6-1.csproj.CoreCompileInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2015\6\aoc-6-1\aoc-6-1-15\obj\Debug\netcoreapp3.1\aoc-6-1.dll
+C:\Users\Sebbe\Desktop\aoc\2015\6\aoc-6-1\aoc-6-1-15\obj\Debug\netcoreapp3.1\aoc-6-1.pdb
+C:\Users\Sebbe\Desktop\aoc\2015\6\aoc-6-1\aoc-6-1-15\obj\Debug\netcoreapp3.1\aoc-6-1.genruntimeconfig.cache

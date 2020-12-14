@@ -1,0 +1,12 @@
+C:\Users\Sebbe\Desktop\aoc\2020\13\aoc-13-test\aoc-13-test\bin\Debug\netcoreapp3.1\aoc-13-test.exe
+C:\Users\Sebbe\Desktop\aoc\2020\13\aoc-13-test\aoc-13-test\bin\Debug\netcoreapp3.1\aoc-13-test.deps.json
+C:\Users\Sebbe\Desktop\aoc\2020\13\aoc-13-test\aoc-13-test\bin\Debug\netcoreapp3.1\aoc-13-test.runtimeconfig.json
+C:\Users\Sebbe\Desktop\aoc\2020\13\aoc-13-test\aoc-13-test\bin\Debug\netcoreapp3.1\aoc-13-test.runtimeconfig.dev.json
+C:\Users\Sebbe\Desktop\aoc\2020\13\aoc-13-test\aoc-13-test\bin\Debug\netcoreapp3.1\aoc-13-test.dll
+C:\Users\Sebbe\Desktop\aoc\2020\13\aoc-13-test\aoc-13-test\bin\Debug\netcoreapp3.1\aoc-13-test.pdb
+C:\Users\Sebbe\Desktop\aoc\2020\13\aoc-13-test\aoc-13-test\obj\Debug\netcoreapp3.1\aoc-13-test.AssemblyInfoInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2020\13\aoc-13-test\aoc-13-test\obj\Debug\netcoreapp3.1\aoc-13-test.AssemblyInfo.cs
+C:\Users\Sebbe\Desktop\aoc\2020\13\aoc-13-test\aoc-13-test\obj\Debug\netcoreapp3.1\aoc-13-test.csproj.CoreCompileInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2020\13\aoc-13-test\aoc-13-test\obj\Debug\netcoreapp3.1\aoc-13-test.dll
+C:\Users\Sebbe\Desktop\aoc\2020\13\aoc-13-test\aoc-13-test\obj\Debug\netcoreapp3.1\aoc-13-test.pdb
+C:\Users\Sebbe\Desktop\aoc\2020\13\aoc-13-test\aoc-13-test\obj\Debug\netcoreapp3.1\aoc-13-test.genruntimeconfig.cache

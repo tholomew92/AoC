@@ -1,0 +1,12 @@
+C:\Users\Sebbe\Desktop\aoc\2020\4\anec_sol\anec_sol\obj\Debug\netcoreapp3.1\anec_sol.AssemblyInfoInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2020\4\anec_sol\anec_sol\obj\Debug\netcoreapp3.1\anec_sol.AssemblyInfo.cs
+C:\Users\Sebbe\Desktop\aoc\2020\4\anec_sol\anec_sol\obj\Debug\netcoreapp3.1\anec_sol.csproj.CoreCompileInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2020\4\anec_sol\anec_sol\bin\Debug\netcoreapp3.1\anec_sol.exe
+C:\Users\Sebbe\Desktop\aoc\2020\4\anec_sol\anec_sol\bin\Debug\netcoreapp3.1\anec_sol.deps.json
+C:\Users\Sebbe\Desktop\aoc\2020\4\anec_sol\anec_sol\bin\Debug\netcoreapp3.1\anec_sol.runtimeconfig.json
+C:\Users\Sebbe\Desktop\aoc\2020\4\anec_sol\anec_sol\bin\Debug\netcoreapp3.1\anec_sol.runtimeconfig.dev.json
+C:\Users\Sebbe\Desktop\aoc\2020\4\anec_sol\anec_sol\bin\Debug\netcoreapp3.1\anec_sol.dll
+C:\Users\Sebbe\Desktop\aoc\2020\4\anec_sol\anec_sol\bin\Debug\netcoreapp3.1\anec_sol.pdb
+C:\Users\Sebbe\Desktop\aoc\2020\4\anec_sol\anec_sol\obj\Debug\netcoreapp3.1\anec_sol.dll
+C:\Users\Sebbe\Desktop\aoc\2020\4\anec_sol\anec_sol\obj\Debug\netcoreapp3.1\anec_sol.pdb
+C:\Users\Sebbe\Desktop\aoc\2020\4\anec_sol\anec_sol\obj\Debug\netcoreapp3.1\anec_sol.genruntimeconfig.cache

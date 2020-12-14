@@ -1,0 +1,13 @@
+C:\Users\sega9727\source\repos\14\aoc-14-2\aoc-14-2\bin\Debug\netcoreapp3.1\aoc-14-2.exe
+C:\Users\sega9727\source\repos\14\aoc-14-2\aoc-14-2\bin\Debug\netcoreapp3.1\aoc-14-2.deps.json
+C:\Users\sega9727\source\repos\14\aoc-14-2\aoc-14-2\bin\Debug\netcoreapp3.1\aoc-14-2.runtimeconfig.json
+C:\Users\sega9727\source\repos\14\aoc-14-2\aoc-14-2\bin\Debug\netcoreapp3.1\aoc-14-2.runtimeconfig.dev.json
+C:\Users\sega9727\source\repos\14\aoc-14-2\aoc-14-2\bin\Debug\netcoreapp3.1\aoc-14-2.dll
+C:\Users\sega9727\source\repos\14\aoc-14-2\aoc-14-2\bin\Debug\netcoreapp3.1\aoc-14-2.pdb
+C:\Users\sega9727\source\repos\14\aoc-14-2\aoc-14-2\obj\Debug\netcoreapp3.1\aoc-14-2.csprojAssemblyReference.cache
+C:\Users\sega9727\source\repos\14\aoc-14-2\aoc-14-2\obj\Debug\netcoreapp3.1\aoc-14-2.AssemblyInfoInputs.cache
+C:\Users\sega9727\source\repos\14\aoc-14-2\aoc-14-2\obj\Debug\netcoreapp3.1\aoc-14-2.AssemblyInfo.cs
+C:\Users\sega9727\source\repos\14\aoc-14-2\aoc-14-2\obj\Debug\netcoreapp3.1\aoc-14-2.csproj.CoreCompileInputs.cache
+C:\Users\sega9727\source\repos\14\aoc-14-2\aoc-14-2\obj\Debug\netcoreapp3.1\aoc-14-2.dll
+C:\Users\sega9727\source\repos\14\aoc-14-2\aoc-14-2\obj\Debug\netcoreapp3.1\aoc-14-2.pdb
+C:\Users\sega9727\source\repos\14\aoc-14-2\aoc-14-2\obj\Debug\netcoreapp3.1\aoc-14-2.genruntimeconfig.cache
