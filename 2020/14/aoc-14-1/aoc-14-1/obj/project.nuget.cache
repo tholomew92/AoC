@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "xTuSo3wN1jPRp+UufN5kCrNFIWNF+tVUyH53wr0y8wKfvekyySH6THsAvIiT5UMzf/JxF5qgXPHCBmUdpQboGw==",
+  "dgSpecHash": "6L5xwXD9nRRjV3NqDjm9jBtTguLa1BdR81ZcAVUDqB8H7mw9+ECRxSeNoqEJZ5aO1IL00y8AXbxERgBeaA/GAA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sega9727\\source\\repos\\14\\aoc-14-1\\aoc-14-1\\aoc-14-1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Sebbe\\Desktop\\aoc\\2020\\14\\aoc-14-1\\aoc-14-1\\aoc-14-1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sebbe\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\Sebbe\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+  ],
   "logs": []
 }

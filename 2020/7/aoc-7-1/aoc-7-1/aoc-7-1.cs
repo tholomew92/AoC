@@ -8,8 +8,10 @@ namespace aoc_7_1
 {
     class Program
     {
-        List<string> input = File.ReadAllLines(@"C:\Users\sega9727\source\repos\aoc-7-1\aoc-7-1\bin\Debug\input.txt").ToList();
-        Dictionary<string, List<string>> bagDict = new Dictionary<string, List<string>>();
+        static string workdir = Environment.CurrentDirectory;
+        static string inputPath = new DirectoryInfo(workdir).Parent.Parent.Parent.Parent.Parent.ToString();
+        List<string> input = File.ReadAllLines(inputPath + "\\input.txt").ToList();
+		Dictionary<string, List<string>> bagDict = new Dictionary<string, List<string>>();
 
         void FindBags()
         {

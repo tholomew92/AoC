@@ -7,8 +7,10 @@ namespace aoc_12_1
 {
     class Program
     {
-        //List<string> input = File.ReadAllLines(@"C:\Users\Sebbe\Desktop\aoc\2020\12\test.txt").ToList();
-        List<string> input = File.ReadAllLines(@"C:\Users\Sebbe\Desktop\aoc\2020\12\input.txt").ToList();
+        static string workdir = Environment.CurrentDirectory;
+        static string inputPath = new DirectoryInfo(workdir).Parent.Parent.Parent.Parent.Parent.ToString();
+        List<string> input = File.ReadAllLines(inputPath + "\\input.txt").ToList();
+        //List<string> input = File.ReadAllLines(inputPath + "\\test.txt").ToList();
         char[] directions = new char[] { 'N', 'E', 'S', 'W' };
         List<Point> path = new List<Point>();
 

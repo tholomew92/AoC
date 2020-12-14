@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sega9727\\source\\repos\\14\\aoc-14-1\\aoc-14-1\\aoc-14-1.csproj": {}
+    "C:\\Users\\Sebbe\\Desktop\\aoc\\2020\\14\\aoc-14-1\\aoc-14-1\\aoc-14-1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sega9727\\source\\repos\\14\\aoc-14-1\\aoc-14-1\\aoc-14-1.csproj": {
+    "C:\\Users\\Sebbe\\Desktop\\aoc\\2020\\14\\aoc-14-1\\aoc-14-1\\aoc-14-1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sega9727\\source\\repos\\14\\aoc-14-1\\aoc-14-1\\aoc-14-1.csproj",
+        "projectUniqueName": "C:\\Users\\Sebbe\\Desktop\\aoc\\2020\\14\\aoc-14-1\\aoc-14-1\\aoc-14-1.csproj",
         "projectName": "aoc-14-1",
-        "projectPath": "C:\\Users\\sega9727\\source\\repos\\14\\aoc-14-1\\aoc-14-1\\aoc-14-1.csproj",
-        "packagesPath": "C:\\Users\\sega9727\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sega9727\\source\\repos\\14\\aoc-14-1\\aoc-14-1\\obj\\",
+        "projectPath": "C:\\Users\\Sebbe\\Desktop\\aoc\\2020\\14\\aoc-14-1\\aoc-14-1\\aoc-14-1.csproj",
+        "packagesPath": "C:\\Users\\Sebbe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sebbe\\Desktop\\aoc\\2020\\14\\aoc-14-1\\aoc-14-1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "\\\\MICKEY\\teknisk\\sega9727\\Application Data\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sebbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,12 +49,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

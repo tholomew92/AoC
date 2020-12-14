@@ -7,8 +7,10 @@ namespace aoc_11_2
 {
     class Program
     {
-        //static readonly List<string> input = File.ReadAllLines(@"C:\Users\Sebbe\Desktop\aoc\2020\11\test.txt").ToList();
-        static readonly List<string> input = File.ReadAllLines(@"C:\Users\Sebbe\Desktop\aoc\2020\11\input.txt").ToList();
+        static string workdir = Environment.CurrentDirectory;
+        static string inputPath = new DirectoryInfo(workdir).Parent.Parent.Parent.Parent.Parent.ToString();
+        List<string> input = File.ReadAllLines(inputPath + "\\input.txt").ToList();
+        //List<string> input = File.ReadAllLines(inputPath + "\\test.txt").ToList();
         public static readonly char TakenSeatToken = '#';
         public static readonly char AvailableSeatToken = 'L';
         public static readonly char FloorToken = '.';

@@ -6,8 +6,10 @@ namespace aoc_8_2
 {
     class Program
     {
-        static readonly List<String> input = System.IO.File.ReadLines(@"C:\Users\Sebbe\Desktop\aoc\2020\8\input.txt").ToList();
-
+        static string workdir = Environment.CurrentDirectory;
+        static string inputPath = new DirectoryInfo(workdir).Parent.Parent.Parent.Parent.Parent.ToString();
+        List<string> input = File.ReadAllLines(inputPath + "\\input.txt").ToList();
+		
         bool Boot()
         {
             int mod = 0;

@@ -5,7 +5,9 @@ namespace aoc_3_2
 {
     class Program
     {
-        static readonly String[] input = System.IO.File.ReadAllLines(@"C:\Users\Sebbe\Desktop\aoc\2020\3\input.txt");
+        static string workdir = Environment.CurrentDirectory;
+        static string inputPath = new DirectoryInfo(workdir).Parent.Parent.Parent.Parent.Parent.ToString();
+        List<string> input = File.ReadAllLines(inputPath + "\\input.txt").ToList();
 
 
         int TraverseSlope(int right, int down)

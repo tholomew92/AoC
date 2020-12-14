@@ -6,9 +6,11 @@ namespace aoc_9_1
 {
     class Program
     {
-        //static readonly List<String> input = System.IO.File.ReadLines(@"C:\Users\Sebbe\Desktop\aoc\2020\9\test.txt").ToList();
-        static readonly List<String> input = System.IO.File.ReadLines(@"C:\Users\Sebbe\Desktop\aoc\2020\9\input.txt").ToList();
-
+        static string workdir = Environment.CurrentDirectory;
+        static string inputPath = new DirectoryInfo(workdir).Parent.Parent.Parent.Parent.Parent.ToString();
+        List<string> input = File.ReadAllLines(inputPath + "\\input.txt").ToList();
+        //List<string> input = File.ReadAllLines(inputPath + "\\test.txt").ToList();
+        
         void FindNonPramble()
         {
             int sizeOfPramble = 25;

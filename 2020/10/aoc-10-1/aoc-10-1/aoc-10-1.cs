@@ -7,8 +7,10 @@ namespace aoc_10_1
 {
     class Program
     {
-        //List<string> input = File.ReadAllLines(@"C:\Users\Sebbe\Desktop\aoc\2020\10\test.txt").ToList();
-        List<string> input = File.ReadAllLines(@"C:\Users\Sebbe\Desktop\aoc\2020\10\input.txt").ToList();
+        static string workdir = Environment.CurrentDirectory;
+        static string inputPath = new DirectoryInfo(workdir).Parent.Parent.Parent.Parent.Parent.ToString();
+        List<string> input = File.ReadAllLines(inputPath + "\\input.txt").ToList();
+        //List<string> input = File.ReadAllLines(inputPath + "\\test.txt").ToList();
 
         void Parse()
         {
