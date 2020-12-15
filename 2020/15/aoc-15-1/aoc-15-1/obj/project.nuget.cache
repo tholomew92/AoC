@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "uvZ05DMO82jJQZlusQliiaF8Qro2ejqUgPwDUTpzS+Cb7FJhMpbpiOV4gMO94bnFAUmHkMLmbLE28KT7u/IgrA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Sebbe\\Desktop\\aoc\\2020\\15\\aoc-15-1\\aoc-15-1\\aoc-15-1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sebbe\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\Sebbe\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}
