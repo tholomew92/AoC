@@ -50,6 +50,7 @@ namespace aoc_16_1
                         if (low.Contains(v) | high.Contains(v))
                         {
                             validnum = true;
+                            break;
                         }
                     }
                     if (!validnum)

@@ -29,7 +29,6 @@ namespace aoc_16_2
             }
             var myTicket = input[startIndex + 2].Split(",").Select(int.Parse).ToList();
             ValidRanges(myTicket.Count);
-            int index = 0;
             GetValidTickets(startIndex + 5);
             foreach (var tickets in validTickets) 
             {
@@ -106,6 +105,7 @@ namespace aoc_16_2
                         if (low.Contains(v) | high.Contains(v))
                         {
                             validnum = true;
+                            break;
                         }
                     }
                     if (!validnum)
