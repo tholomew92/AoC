@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
@@ -7,10 +8,12 @@ namespace aoc_16_2
 {
     class Program
     {
+
         static string workdir = Environment.CurrentDirectory;
         static string inputPath = new DirectoryInfo(workdir).Parent.Parent.Parent.Parent.Parent.ToString();
         List<string> input = File.ReadAllLines(inputPath + "\\input.txt").ToList();
         //List<string> input = File.ReadAllLines(inputPath + "\\test.txt").ToList();
+        Stopwatch watch = Stopwatch.StartNew();
 
         readonly Dictionary<string, List<int>> ticketFields = new Dictionary<string, List<int>>();
         Dictionary<string, List<int>> fieldPos = new Dictionary<string, List<int>>();
@@ -18,6 +21,7 @@ namespace aoc_16_2
 
         void PartTwo()
         {
+
             int startIndex = 0;
             foreach (var row in input)
             {
@@ -29,7 +33,10 @@ namespace aoc_16_2
             }
             var myTicket = input[startIndex + 2].Split(",").Select(int.Parse).ToList();
             ValidRanges(myTicket.Count);
+            watch.Stop();
             GetValidTickets(startIndex + 5);
+            Console.WriteLine("Part 1 time: {0}", watch.ElapsedMilliseconds.ToString());
+            watch.Restart();
             foreach (var tickets in validTickets) 
             {
                 int count = 0;
@@ -68,7 +75,10 @@ namespace aoc_16_2
                     total = total * myTicket[pos.Value[0]];
                 }
             }
-            Console.WriteLine(total);
+            Console.WriteLine("Part 2: {0}", total);
+
+            watch.Stop();
+            Console.WriteLine("Part 2 time: {0}",watch.ElapsedMilliseconds.ToString());
         }
 
         void RemoveAllOtherPos(string field, int pos)
@@ -87,6 +97,7 @@ namespace aoc_16_2
 
         void GetValidTickets(int startIndex)
         {
+            int total = 0;
             for (int i = startIndex; i < input.Count; i++)
             {
                 var values = input[i].Split(",").Select(int.Parse).ToList();
@@ -111,6 +122,7 @@ namespace aoc_16_2
                     if (!validnum)
                     {
                         valid = false;
+                        total += v;
                     }
                 }
                 if (valid)
@@ -118,6 +130,7 @@ namespace aoc_16_2
                     validTickets.Add(input[i]);
                 }
             }
+            Console.WriteLine("Part 1: {0}", total);
         }
 
         void ValidRanges(int index)
@@ -152,10 +165,7 @@ namespace aoc_16_2
         static void Main(string[] args)
         {
             Program p = new Program();
-            var watch = System.Diagnostics.Stopwatch.StartNew();
             p.PartTwo();
-            watch.Stop();
-            Console.WriteLine(watch.ElapsedMilliseconds.ToString());
         }
     }
 }
