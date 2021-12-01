@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-
-namespace aoc_1_2
+﻿namespace aoc_1_2
 {
     class Program
     {
