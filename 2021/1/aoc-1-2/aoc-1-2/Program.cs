@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace aoc_1_1
+namespace aoc_1_2
 {
     class Program
     {
@@ -13,13 +13,14 @@ namespace aoc_1_1
         //static readonly List<string> input = File.ReadAllLines(inputPath + "\\test.txt").ToList();
         int increases = 0;
 
-        void FindIncreases() {
+        void FindIncreases()
+        {
             var watch = new System.Diagnostics.Stopwatch();
             watch.Start();
-            for (int i = 0; i < input.Count - 1; i++)
+            for (int i = 0; i < input.Count - 3; i++)
             {
-                int d1 = Int32.Parse(input[i]);
-                int d2 = Int32.Parse(input[i + 1]);
+                int d1 = Int32.Parse(input[i]) + Int32.Parse(input[i+1]) + Int32.Parse(input[i+2]);
+                int d2 = Int32.Parse(input[i + 1]) + Int32.Parse(input[i+2]) + Int32.Parse(input[i+3]);
                 if (d2 > d1) increases++;
             }
             watch.Stop();
