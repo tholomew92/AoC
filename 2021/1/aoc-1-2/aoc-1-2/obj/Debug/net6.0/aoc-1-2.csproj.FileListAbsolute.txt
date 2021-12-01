@@ -12,3 +12,4 @@ C:\aoc\AoC\2021\1\aoc-1-2\aoc-1-2\obj\Debug\net6.0\aoc-1-2.dll
 C:\aoc\AoC\2021\1\aoc-1-2\aoc-1-2\obj\Debug\net6.0\ref\aoc-1-2.dll
 C:\aoc\AoC\2021\1\aoc-1-2\aoc-1-2\obj\Debug\net6.0\aoc-1-2.pdb
 C:\aoc\AoC\2021\1\aoc-1-2\aoc-1-2\obj\Debug\net6.0\aoc-1-2.genruntimeconfig.cache
+C:\aoc\AoC\2021\1\aoc-1-2\aoc-1-2\obj\Debug\net6.0\aoc-1-2.csproj.AssemblyReference.cache

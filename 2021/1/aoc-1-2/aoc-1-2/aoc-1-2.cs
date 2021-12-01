@@ -19,8 +19,8 @@ namespace aoc_1_2
             watch.Start();
             for (int i = 0; i < input.Count - 3; i++)
             {
-                int d1 = Int32.Parse(input[i]) + Int32.Parse(input[i+1]) + Int32.Parse(input[i+2]);
-                int d2 = Int32.Parse(input[i + 1]) + Int32.Parse(input[i+2]) + Int32.Parse(input[i+3]);
+                int d1 = Int32.Parse(input[i]);
+                int d2 = Int32.Parse(input[i + 3]);
                 if (d2 > d1) increases++;
             }
             watch.Stop();
