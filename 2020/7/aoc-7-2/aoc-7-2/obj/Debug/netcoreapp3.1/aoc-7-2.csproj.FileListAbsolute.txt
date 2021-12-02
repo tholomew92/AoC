@@ -11,3 +11,16 @@ C:\Users\sega9727\source\repos\aoc-7-2\aoc-7-2\obj\Debug\netcoreapp3.1\aoc-7-2.c
 C:\Users\sega9727\source\repos\aoc-7-2\aoc-7-2\obj\Debug\netcoreapp3.1\aoc-7-2.dll
 C:\Users\sega9727\source\repos\aoc-7-2\aoc-7-2\obj\Debug\netcoreapp3.1\aoc-7-2.pdb
 C:\Users\sega9727\source\repos\aoc-7-2\aoc-7-2\obj\Debug\netcoreapp3.1\aoc-7-2.genruntimeconfig.cache
+C:\Users\Sebbe\Desktop\aoc\2020\7\aoc-7-2\aoc-7-2\bin\Debug\netcoreapp3.1\aoc-7-2.exe
+C:\Users\Sebbe\Desktop\aoc\2020\7\aoc-7-2\aoc-7-2\bin\Debug\netcoreapp3.1\aoc-7-2.deps.json
+C:\Users\Sebbe\Desktop\aoc\2020\7\aoc-7-2\aoc-7-2\bin\Debug\netcoreapp3.1\aoc-7-2.runtimeconfig.json
+C:\Users\Sebbe\Desktop\aoc\2020\7\aoc-7-2\aoc-7-2\bin\Debug\netcoreapp3.1\aoc-7-2.runtimeconfig.dev.json
+C:\Users\Sebbe\Desktop\aoc\2020\7\aoc-7-2\aoc-7-2\bin\Debug\netcoreapp3.1\aoc-7-2.dll
+C:\Users\Sebbe\Desktop\aoc\2020\7\aoc-7-2\aoc-7-2\bin\Debug\netcoreapp3.1\aoc-7-2.pdb
+C:\Users\Sebbe\Desktop\aoc\2020\7\aoc-7-2\aoc-7-2\obj\Debug\netcoreapp3.1\aoc-7-2.csprojAssemblyReference.cache
+C:\Users\Sebbe\Desktop\aoc\2020\7\aoc-7-2\aoc-7-2\obj\Debug\netcoreapp3.1\aoc-7-2.AssemblyInfoInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2020\7\aoc-7-2\aoc-7-2\obj\Debug\netcoreapp3.1\aoc-7-2.AssemblyInfo.cs
+C:\Users\Sebbe\Desktop\aoc\2020\7\aoc-7-2\aoc-7-2\obj\Debug\netcoreapp3.1\aoc-7-2.csproj.CoreCompileInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2020\7\aoc-7-2\aoc-7-2\obj\Debug\netcoreapp3.1\aoc-7-2.dll
+C:\Users\Sebbe\Desktop\aoc\2020\7\aoc-7-2\aoc-7-2\obj\Debug\netcoreapp3.1\aoc-7-2.pdb
+C:\Users\Sebbe\Desktop\aoc\2020\7\aoc-7-2\aoc-7-2\obj\Debug\netcoreapp3.1\aoc-7-2.genruntimeconfig.cache
