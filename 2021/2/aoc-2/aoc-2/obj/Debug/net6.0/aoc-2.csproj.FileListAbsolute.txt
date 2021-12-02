@@ -1,0 +1,15 @@
+C:\aoc\AoC\2021\2\aoc-2\aoc-2\bin\Debug\net6.0\aoc-2.exe
+C:\aoc\AoC\2021\2\aoc-2\aoc-2\bin\Debug\net6.0\aoc-2.deps.json
+C:\aoc\AoC\2021\2\aoc-2\aoc-2\bin\Debug\net6.0\aoc-2.runtimeconfig.json
+C:\aoc\AoC\2021\2\aoc-2\aoc-2\bin\Debug\net6.0\aoc-2.dll
+C:\aoc\AoC\2021\2\aoc-2\aoc-2\bin\Debug\net6.0\ref\aoc-2.dll
+C:\aoc\AoC\2021\2\aoc-2\aoc-2\bin\Debug\net6.0\aoc-2.pdb
+C:\aoc\AoC\2021\2\aoc-2\aoc-2\obj\Debug\net6.0\aoc-2.csproj.AssemblyReference.cache
+C:\aoc\AoC\2021\2\aoc-2\aoc-2\obj\Debug\net6.0\aoc-2.GeneratedMSBuildEditorConfig.editorconfig
+C:\aoc\AoC\2021\2\aoc-2\aoc-2\obj\Debug\net6.0\aoc-2.AssemblyInfoInputs.cache
+C:\aoc\AoC\2021\2\aoc-2\aoc-2\obj\Debug\net6.0\aoc-2.AssemblyInfo.cs
+C:\aoc\AoC\2021\2\aoc-2\aoc-2\obj\Debug\net6.0\aoc-2.csproj.CoreCompileInputs.cache
+C:\aoc\AoC\2021\2\aoc-2\aoc-2\obj\Debug\net6.0\aoc-2.dll
+C:\aoc\AoC\2021\2\aoc-2\aoc-2\obj\Debug\net6.0\ref\aoc-2.dll
+C:\aoc\AoC\2021\2\aoc-2\aoc-2\obj\Debug\net6.0\aoc-2.pdb
+C:\aoc\AoC\2021\2\aoc-2\aoc-2\obj\Debug\net6.0\aoc-2.genruntimeconfig.cache
