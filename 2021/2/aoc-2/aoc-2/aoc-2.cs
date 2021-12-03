@@ -27,8 +27,8 @@
         int FindPosition()
         {
             int horizontal, depth;
-            horizontal = depth = 0; 
-            foreach(var line in input)
+            horizontal = depth = 0;
+            foreach (var line in input)
             {
                 var instructions = line.Split(' ');
                 _ = instructions[0] switch
