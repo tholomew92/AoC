@@ -51,8 +51,11 @@ namespace aoc_10_2
 
         static void Main(string[] args)
         {
+            var watch = System.Diagnostics.Stopwatch.StartNew();
             Program p = new Program();
             p.Parse();
+            watch.Stop();
+            Console.WriteLine(watch.ElapsedMilliseconds.ToString());
         }
     }
 }
