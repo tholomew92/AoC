@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y5xoEonAHuhQjuG6/OoyThhUyfOqtLVqGm0biXdBuw2d33V0KFMnnF8otRfqg0Stz5lETEmzltsXbeM8YAOGow==",
+  "dgSpecHash": "kqBd8PJsuVHkxaGb542uR3h9x9fL9TAlQpNhO5uB3rB7K7TeiKbAnQhbFZteBqzDr3loRTCUJyvz+dFDlUmOPg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sebbe\\Desktop\\aoc\\2021\\6\\aoc-6\\aoc-6\\aoc-6.csproj",
+  "projectFilePath": "C:\\aoc\\AoC\\2021\\6\\aoc-6\\aoc-6\\aoc-6.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

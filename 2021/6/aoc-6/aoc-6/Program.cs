@@ -12,47 +12,61 @@
             List<int> allFishy = (input[0].Split(',', StringSplitOptions.RemoveEmptyEntries).Select(x => Int32.Parse(x)).ToList());
             for(int i = 0; i < 80; i++) 
             {
-                List<int> tempFishList = allFishy;
+                List<int> allFishyTemp = allFishy;
                 for(int j = 0; j < allFishy.Count; j++)
                 {
                     if (allFishy[j] == 0)
                     {
-                        tempFishList[j] = 6;
-                        tempFishList.Add(9);
+                        allFishyTemp[j] = 6;
+                        allFishyTemp.Add(9);
                     }
-                    else tempFishList[j]--;
+                    else allFishyTemp[j]--;
                 }
-                allFishy = tempFishList;
+                allFishy = allFishyTemp;
             }
 
             return allFishy.Count;
         }
 
-        int PartTwo()
+        long PartTwo()
         {
-            List<int> allFishy = (input[0].Split(',', StringSplitOptions.RemoveEmptyEntries).Select(x => Int32.Parse(x)).ToList());
-            for (int i = 0; i < 256; i++)
-            {   
-                Console.WriteLine(i);
-                List<int> tempFishList = allFishy;
-                for (int j = 0; j < allFishy.Count; j++)
-                {
-                    if (allFishy[j] == 0)
-                    {
-                        tempFishList[j] = 6;
-                        tempFishList.Add(9);
-                    }
-                    else tempFishList[j]--;
-                }
-                allFishy = tempFishList;
+            List<long> fishyInput = input[0].Split(',').Select(x => long.Parse(x)).ToList();
+            long[] allFishy = new long[9];
+            long[] allFishyTemp = new long[9];
+
+            foreach (var fish in fishyInput) 
+            {
+                allFishy[fish]++;
             }
 
-            return allFishy.Count;
+            for (int i = 0; i < 256; i++)
+            {
+                for (int j = 0; j < 9; j++) 
+                {
+                    if (j == 0) 
+                    {
+                        allFishyTemp[6] = allFishy[0];
+                        allFishyTemp[8] = allFishy[0];
+                    }
+                    else
+                    {
+                        allFishyTemp[j-1] += allFishy[j];
+                    }
+
+                    if (j == 8) 
+                    {
+                        allFishy = allFishyTemp;
+                        allFishyTemp = new long[9];
+                    }
+                }
+            }
+
+            return allFishy.Sum();
         }
 
         void Run()
         {
-            int result;
+            long result;
             var watch = new System.Diagnostics.Stopwatch();
             watch.Start();
             result = PartOne();

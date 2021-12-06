@@ -8,23 +8,23 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Sebbe\\.nuget\\packages\\": {},
+    "C:\\Users\\sega9727\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sebbe\\Desktop\\aoc\\2021\\6\\aoc-6\\aoc-6\\aoc-6.csproj",
+      "projectUniqueName": "C:\\aoc\\AoC\\2021\\6\\aoc-6\\aoc-6\\aoc-6.csproj",
       "projectName": "aoc-6",
-      "projectPath": "C:\\Users\\Sebbe\\Desktop\\aoc\\2021\\6\\aoc-6\\aoc-6\\aoc-6.csproj",
-      "packagesPath": "C:\\Users\\Sebbe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sebbe\\Desktop\\aoc\\2021\\6\\aoc-6\\aoc-6\\obj\\",
+      "projectPath": "C:\\aoc\\AoC\\2021\\6\\aoc-6\\aoc-6\\aoc-6.csproj",
+      "packagesPath": "C:\\Users\\sega9727\\.nuget\\packages\\",
+      "outputPath": "C:\\aoc\\AoC\\2021\\6\\aoc-6\\aoc-6\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Sebbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sega9727\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
