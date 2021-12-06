@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\aoc\\AoC\\2021\\6\\aoc-6-new\\aoc-6-new\\aoc-6-new.csproj": {}
+    "C:\\Users\\Sebbe\\Desktop\\aoc\\2021\\6\\aoc-6-new\\aoc-6-new\\aoc-6-new.csproj": {}
   },
   "projects": {
-    "C:\\aoc\\AoC\\2021\\6\\aoc-6-new\\aoc-6-new\\aoc-6-new.csproj": {
+    "C:\\Users\\Sebbe\\Desktop\\aoc\\2021\\6\\aoc-6-new\\aoc-6-new\\aoc-6-new.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\aoc\\AoC\\2021\\6\\aoc-6-new\\aoc-6-new\\aoc-6-new.csproj",
+        "projectUniqueName": "C:\\Users\\Sebbe\\Desktop\\aoc\\2021\\6\\aoc-6-new\\aoc-6-new\\aoc-6-new.csproj",
         "projectName": "aoc-6-new",
-        "projectPath": "C:\\aoc\\AoC\\2021\\6\\aoc-6-new\\aoc-6-new\\aoc-6-new.csproj",
-        "packagesPath": "C:\\Users\\sega9727\\.nuget\\packages\\",
-        "outputPath": "C:\\aoc\\AoC\\2021\\6\\aoc-6-new\\aoc-6-new\\obj\\",
+        "projectPath": "C:\\Users\\Sebbe\\Desktop\\aoc\\2021\\6\\aoc-6-new\\aoc-6-new\\aoc-6-new.csproj",
+        "packagesPath": "C:\\Users\\Sebbe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sebbe\\Desktop\\aoc\\2021\\6\\aoc-6-new\\aoc-6-new\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\sega9727\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sebbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
