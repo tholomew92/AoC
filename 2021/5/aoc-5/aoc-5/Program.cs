@@ -1,4 +1,38 @@
-﻿namespace aoc_4
+﻿
+Skip to content
+Pull requests
+Issues
+Marketplace
+Explore
+@tholomew92
+tholomew92 /
+AoC
+Public
+
+1
+0
+
+    0
+
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+
+    Settings
+
+AoC/2021/5/aoc-5/aoc-5/Program.cs /
+@tholomew92
+tholomew92 Adding day 4 and 5
+Latest commit ed9de57 24 minutes ago
+History
+1 contributor
+173 lines (157 sloc) 5.28 KB
+namespace aoc_4
 {
     class Program
     {
@@ -12,11 +46,12 @@
         {
             int[,] matrix = new int[size, size];
 
-            foreach (var line in input) { 
-                var splits = line.Split("->",StringSplitOptions.TrimEntries);
+            foreach (var line in input)
+            {
+                var splits = line.Split("->", StringSplitOptions.TrimEntries);
                 var point1 = splits[0].Split(',');
                 var point2 = splits[1].Split(',');
-                int x1,y1,x2,y2;
+                int x1, y1, x2, y2;
                 x1 = Int32.Parse(point1[0]);
                 y1 = Int32.Parse(point1[1]);
                 x2 = Int32.Parse(point2[0]);
@@ -24,14 +59,14 @@
 
                 if (x1 == x2)
                 {
-                    if (y1 < y2) 
+                    if (y1 < y2)
                     {
-                        for (int i = y1; i <= y2; i++) 
+                        for (int i = y1; i <= y2; i++)
                         {
                             matrix[x1, i]++;
                         }
                     }
-                    else 
+                    else
                     {
                         for (int i = y2; i <= y1; i++)
                         {
@@ -39,7 +74,7 @@
                         }
                     }
                 }
-                else if (y1 == y2) 
+                else if (y1 == y2)
                 {
                     if (x1 < x2)
                     {
@@ -60,11 +95,11 @@
 
             }
             int count = 0;
-            for (int x = 0; x < size; x++) 
+            for (int x = 0; x < size; x++)
             {
                 for (int y = 0; y < size; y++)
                 {
-                    if (matrix[y,x ]>1) count++;
+                    if (matrix[y, x] > 1) count++;
                 }
             }
 
@@ -123,7 +158,7 @@
                         }
                     }
                 }
-                else if(xDiff == yDiff || xDiff == -yDiff)
+                else if (xDiff == yDiff || xDiff == -yDiff)
                 {
                     for (int xy = 0; xy < Math.Abs(xDiff) + 1; xy++)
                     {
@@ -171,3 +206,19 @@
 
     }
 }
+
+    © 2021 GitHub, Inc.
+
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+    Contact GitHub
+    Pricing
+    API
+    Training
+    Blog
+    About
+
+6 results found.
