@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "443db8a0-f6ea-4019-bdf2-a00d69f6dddf": {
+      "ProjectGuid": "443db8a0-f6ea-4019-bdf2-a00d69f6dddf",
+      "DisplayName": "aoc-6-new",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
