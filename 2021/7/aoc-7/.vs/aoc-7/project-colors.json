@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "25329be0-fbe6-47f2-81c8-c7cbe0f054e6": {
+      "ProjectGuid": "25329be0-fbe6-47f2-81c8-c7cbe0f054e6",
+      "DisplayName": "aoc-7",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
