@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "cde7445e-045d-4f32-a055-da45db76b9cc": {
+      "ProjectGuid": "cde7445e-045d-4f32-a055-da45db76b9cc",
+      "DisplayName": "aoc-8",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

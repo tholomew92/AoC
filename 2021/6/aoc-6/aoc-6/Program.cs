@@ -89,6 +89,7 @@
             Console.WriteLine($"The result for part one is: {result}");
             Console.WriteLine($"Time is {watch.ElapsedMilliseconds.ToString()} ms");
             watch.Reset();
+			watch.Start();
             result = PartTwo();
             watch.Stop();
             Console.WriteLine($"The result for part one is: {result}");
