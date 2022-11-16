@@ -1,18 +1,29 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System.Text.RegularExpressions;
+
 namespace aoc_10_new
 {
     class Program
     {
-    static string workdir = Environment.CurrentDirectory;
-    static string inputPath = new DirectoryInfo(workdir).Parent.Parent.Parent.Parent.Parent.ToString();
-    static readonly List<string> input = File.ReadAllLines(inputPath + "\\input.txt").ToList();
+        static string workdir = Environment.CurrentDirectory;
+        static string inputPath = new DirectoryInfo(workdir).Parent.Parent.Parent.Parent.Parent.ToString();
+        static readonly List<string> input = File.ReadAllLines(inputPath + "\\input.txt").ToList();
         //static readonly List<string> input = File.ReadAllLines(inputPath + "\\test.txt").ToList();
 
+        long GetValue(string line)
+        {
+            Console.WriteLine(Regex.Replace(line.Replace("\\\"", "A").Replace("\\\\", "B"), "\\\\x[a-f0-9]{2}", "C"));
+            return Regex.Replace(line.Replace("\\\"", "A").Replace("\\\\", "B"), "\\\\x[a-f0-9]{2}", "C").Length;
+        }
 
         long PartOne()
         {
-            return 0;
+            long result = 0;
+
+            foreach(var line in input)
+            {
+                result += (line.Length - GetValue(line.Trim('"')));
+            }
+            return result;
         }
 
         long PartTwo()
@@ -39,7 +50,7 @@ namespace aoc_10_new
 
         static void Main(string[] args)
         {
-            Program p = new Program();
+            Program p = new();
             p.Run();
         }
     }
