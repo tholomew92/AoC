@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -7,132 +8,219 @@ namespace aoc_7_1
 {
     class Program
     {
-        static readonly List<String> input = System.IO.File.ReadLines("C:\\Users\\Sebbe\\Desktop\\aoc\\2015\\7\\input.txt").ToList();
-        Dictionary<string, uint> memory = new Dictionary<string, uint>();
-        int max = 65079;
+        static string workdir = Environment.CurrentDirectory;
+        static string inputPath = new DirectoryInfo(workdir).Parent.Parent.Parent.Parent.Parent.ToString();
+        static readonly List<string> input = File.ReadAllLines(inputPath + "\\input.txt").ToList();
+        //static readonly List<string> input = File.ReadAllLines(inputPath + "\\test.txt").ToList();
+        Dictionary<string, string> instructions = new Dictionary<string, string>();
+        Dictionary<string, ushort> memory = new Dictionary<string, ushort>();
+        //int max = 65079;
         void ParseInput()
         {
-            foreach(var row in input)
+            foreach (var row in input)
             {
                 string[] line = row.Split("->", StringSplitOptions.RemoveEmptyEntries);
-                memory.Add(line[1].Trim(), 0);
-                if(!line[0].Trim().Contains(" "))
+
+                instructions[line[1].Trim()] = line[0].Trim();
+            }
+        }
+
+        ushort PartOne()
+        {
+            HandleInstruction("a");
+            return memory["a"];
+        }
+
+        ushort PartTwo(ushort partOneResult)
+        {
+            memory.Clear();
+            instructions["b"] = partOneResult.ToString();
+            HandleInstruction("a");
+            return memory["a"];
+        }
+
+        void HandleInstruction(string key)
+        {
+            string instr = instructions[key];
+                memory[key] = instr switch
                 {
-                    Console.WriteLine(row);
-                    uint v1;
-                    if (int.TryParse(line[0].Trim(), out int x)) v1 = (uint)x;
-                    else if (memory.ContainsKey(line[0])) v1 = memory[line[0]];
-                    else v1 = 0;
-                    memory[line[1].Trim()] = v1;
-                }
+                    var _ when instr.Contains("AND") => AndInstr(instr),
+                    var _ when instr.Contains("OR") => OrInstr(instr),
+                    var _ when instr.Contains("LSHIFT") => LShInstr(instr),
+                    var _ when instr.Contains("RSHIFT") => RShInstr(instr),
+                    var _ when instr.Contains("NOT") => NotInstr(instr),
+                    _ => AssInstr(instr),
+                };
+               ;
+        }
+
+        ushort AndInstr(string instr)
+        {
+            var values = instr.Split(" AND ", StringSplitOptions.RemoveEmptyEntries);
+            ushort val1, val2;
+            var isNumber = ushort.TryParse(values[0].Trim(), out val1);
+            if (!isNumber)
+            {
+                if (memory.ContainsKey(values[0].Trim())) val1 = memory[values[0]];
                 else
                 {
-                    string[] result = HandleInstruction(line).Split(",",StringSplitOptions.RemoveEmptyEntries);
-                    memory[result[0]] = uint.Parse(result[1]);
+                    HandleInstruction(values[0].Trim());
+                    val1 = memory[values[0]];
                 }
-
             }
-
-        }
-
-        /*string SetValue(string row)
-        {
-
-
-        }*/
-
-
-        string HandleInstruction(string[] line)
-        {
-            var instr = line[0].Split(" ", StringSplitOptions.RemoveEmptyEntries);
-            return instr[instr.Length - 2] switch
+            isNumber = ushort.TryParse(values[1].Trim(), out val2);
+            if (!isNumber)
             {
-                "AND" => AndInstr(instr, line[1]),
-                "OR" => OrInstr(instr, line[1]),
-                "LSHIFT" => LShInstr(instr, line[1]),
-                "RSHIFT" => RShfInstr(instr, line[1]),
-                "NOT" => NotInstr(instr, line[1]),
-                _ => "",
-            };
+                if (memory.ContainsKey(values[1].Trim())) val2 = memory[values[1]];
+                else
+                {
+                    HandleInstruction(values[1].Trim());
+                    val2 = memory[values[1]];
+                }
+            }
+            var value = val1 & val2;
+            return (ushort)value;
         }
 
-        string AndInstr(string[] line, string key)
+        ushort OrInstr(string instr)
         {
-            bool intTest = uint.TryParse(line[0].Trim(), out uint x);
-            uint v1;
-            if (intTest) v1 = x;
-            else if (memory.ContainsKey(line[0])) v1 = memory[line[0]];
-            else v1 = 0;
-            intTest = uint.TryParse(line[2].Trim(), out uint y);
-            uint v2;
-            if (intTest) v2 = y;
-            else if (memory.ContainsKey(line[2])) v2 = memory[line[2]];
-            else v2 = 0;
-            var value = v1 & v2;
-            string s = key.Trim() + "," + value;
-            Console.WriteLine(s);
-            return s;
+            var values = instr.Split(" OR ", StringSplitOptions.RemoveEmptyEntries);
+            ushort val1, val2;
+            var isNumber = ushort.TryParse(values[0].Trim(), out val1);
+            if (!isNumber)
+            {
+                if (memory.ContainsKey(values[0].Trim())) val1 = memory[values[0]];
+                else
+                {
+                    HandleInstruction(values[0].Trim());
+                    val1 = memory[values[0]];
+                }
+            }
+            isNumber = ushort.TryParse(values[1].Trim(), out val2);
+            if (!isNumber)
+            {
+                if (memory.ContainsKey(values[1].Trim())) val2 = memory[values[1]];
+                else
+                {
+                    HandleInstruction(values[1].Trim());
+                    val2 = memory[values[1]];
+                }
+            }
+            var value = val1 | val2;
+            return (ushort)value;
+        }
+        ushort LShInstr(string instr)
+        {
+            var values = instr.Split(" LSHIFT ", StringSplitOptions.RemoveEmptyEntries);
+            ushort val1, val2;
+            var isNumber = ushort.TryParse(values[0].Trim(), out val1);
+            if (!isNumber)
+            {
+                if (memory.ContainsKey(values[0].Trim())) val1 = memory[values[0]];
+                else
+                {
+                    HandleInstruction(values[0].Trim());
+                    val1 = memory[values[0]];
+                }
+            }
+            isNumber = ushort.TryParse(values[1].Trim(), out val2);
+            if (!isNumber)
+            {
+                if (memory.ContainsKey(values[1].Trim())) val2 = memory[values[1]];
+                else
+                {
+                    HandleInstruction(values[1].Trim());
+                    val2 = memory[values[1]];
+                }
+            }
+            var value = val1 << val2;
+            return (ushort)value;
         }
 
-        string OrInstr(string[] line, string key)
+        ushort RShInstr(string instr)
         {
-            bool intTest = uint.TryParse(line[0].Trim(), out uint x);
-            uint v1;
-            if (intTest) v1 = x;
-            else if (memory.ContainsKey(line[0])) v1 = memory[line[0]];
-            else v1 = 0;
-            intTest = uint.TryParse(line[2].Trim(), out uint y);
-            uint v2;
-            if (intTest) v2 = y;
-            else if (memory.ContainsKey(line[2])) v2 = memory[line[2]];
-            else v2 = 0;
-            var value = v1 | v2;
-            string s = key.Trim() + "," + value;
-            return s;
+            var values = instr.Split(" RSHIFT ", StringSplitOptions.RemoveEmptyEntries);
+            ushort val1, val2;
+            var isNumber = ushort.TryParse(values[0].Trim(), out val1);
+            if (!isNumber)
+            {
+                if (memory.ContainsKey(values[0].Trim())) val1 = memory[values[0]];
+                else
+                {
+                    HandleInstruction(values[0].Trim());
+                    val1 = memory[values[0]];
+                }
+            }
+            isNumber = ushort.TryParse(values[1].Trim(), out val2);
+            if (!isNumber)
+            {
+                if (memory.ContainsKey(values[1].Trim())) val2 = memory[values[1]];
+                else
+                {
+                    HandleInstruction(values[1].Trim());
+                    val2 = memory[values[1]];
+                }
+            }
+            var value = val1 >> val2;
+            return (ushort)value;
         }
 
-        string LShInstr(string[] line, string key)
+        ushort NotInstr(string instr)
         {
-            bool intTest = uint.TryParse(line[0].Trim(), out uint x);
-            uint v1;
-            if (intTest) v1 = x;
-            else if (memory.ContainsKey(line[0])) v1 = memory[line[0]];
-            else v1 = 0;
-            int v2 = int.Parse(line[2].Trim());
-            var value = v1 << v2;
-            string s = key.Trim() + "," + value;
-            return s;
+            var values = instr.Split("NOT ", StringSplitOptions.RemoveEmptyEntries);
+            ushort val;
+            var isNumber = ushort.TryParse(values[0].Trim(), out val);
+            if (!isNumber)
+            {
+                if (memory.ContainsKey(values[0].Trim())) val = memory[values[0]];
+                else
+                {
+                    HandleInstruction(values[0].Trim());
+                    val = memory[values[0]];
+                }
+            }
+            var value = ~val;
+            return (ushort)value;
         }
 
-        string RShfInstr(string[] line, string key)
+        ushort AssInstr(string instr)
         {
-            bool intTest = uint.TryParse(line[0].Trim(), out uint x);
-            uint v1;
-            if (intTest) v1 = x;
-            else if (memory.ContainsKey(line[0])) v1 = memory[line[0]];
-            else v1 = 0;
-            int v2 = int.Parse(line[2].Trim());
-            var value = v1 >> v2;
-            string s = key.Trim() + "," + value;
-            return s;
+            var isNumber = ushort.TryParse(instr.Trim(), out ushort val);
+            if (isNumber) return val;
+            else
+            {
+                if (memory.ContainsKey(instr.Trim())) val = memory[instr.Trim()];
+                else
+                {
+                    HandleInstruction(instr.Trim());
+                    val = memory[instr];
+                }
+            }
+            return val;
         }
-        
-        string NotInstr(string[] line, string key)
+
+        void Run()
         {
-            bool intTest = uint.TryParse(line[0].Trim(), out uint x);
-            uint v1;
-            if (intTest) v1 = x;
-            else if (memory.ContainsKey(line[0])) v1 = memory[line[0]];
-            else v1 = 0;
-            var value = (UInt16) ~v1;
-            string s = key.Trim() + "," + value;
-            return s;
+            ParseInput();
+            ushort result;
+            var watch = new System.Diagnostics.Stopwatch();
+            watch.Start();
+            result = PartOne();
+            watch.Stop();
+            Console.WriteLine($"The result for part one is: {result}");
+            Console.WriteLine($"Time is {watch.ElapsedMilliseconds} ms");
+            watch.Reset();
+            watch.Start();
+            result = PartTwo(result);
+            watch.Stop();
+            Console.WriteLine($"The result for part one is: {result}");
+            Console.WriteLine($"Time is {watch.ElapsedMilliseconds} ms");
         }
 
         static void Main(string[] args)
         {
             Program p = new Program();
-            p.ParseInput();
+            p.Run();
         }
     }
 }

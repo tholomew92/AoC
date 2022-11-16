@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "swETKnMxAPGo/4AVu9EDhJQObRpYTx2zfTIiX14d3NbqWgBZAdgvAohR04d5i0r8QW5YgREEI2LF915+yj6wSA==",
+  "dgSpecHash": "7gWBioe85ewWhI2TDBhu+pPswDlqTdsZMlkR2IdOa3V4zBij8lsse9V4BoesbszR1OHPjkDOYgqbikuBkMYA0A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sebbe\\Desktop\\aoc\\2015\\7\\aoc-7-1\\aoc-7-1\\aoc-7-1.csproj",
+  "projectFilePath": "C:\\Users\\sega9727\\Aoc\\2015\\7\\aoc-7-1\\aoc-7-1\\aoc-7-1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Sebbe\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\Sebbe\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+    "C:\\Users\\sega9727\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\sega9727\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\sega9727\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\sega9727\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.31\\microsoft.netcore.app.host.win-x64.3.1.31.nupkg.sha512"
   ],
   "logs": []
 }
