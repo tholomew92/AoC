@@ -9,10 +9,14 @@ namespace aoc_10_new
         static readonly List<string> input = File.ReadAllLines(inputPath + "\\input.txt").ToList();
         //static readonly List<string> input = File.ReadAllLines(inputPath + "\\test.txt").ToList();
 
-        long GetValue(string line)
+        long GetValuePartOne(string line)
         {
-            Console.WriteLine(Regex.Replace(line.Replace("\\\"", "A").Replace("\\\\", "B"), "\\\\x[a-f0-9]{2}", "C"));
             return Regex.Replace(line.Replace("\\\"", "A").Replace("\\\\", "B"), "\\\\x[a-f0-9]{2}", "C").Length;
+        }
+
+        long GetValuePartTwo(string line)
+        {
+            return line.Replace("\\", "AA").Replace("\"", "BB").Length;
         }
 
         long PartOne()
@@ -21,14 +25,20 @@ namespace aoc_10_new
 
             foreach(var line in input)
             {
-                result += (line.Length - GetValue(line.Trim('"')));
+                result += (line.Length - GetValuePartOne(line.Trim('"')));
             }
             return result;
         }
 
         long PartTwo()
         {
-            return 0;
+            long result = 0;
+
+            foreach (var line in input)
+            {
+                result += (GetValuePartTwo(line) + 2 - line.Length);
+            }
+            return result;
         }
 
         void Run()
