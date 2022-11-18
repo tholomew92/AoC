@@ -1,0 +1,15 @@
+C:\Users\sega9727\Aoc\2015\9\aoc-9\aoc-9\bin\Debug\net7.0\aoc-9.exe
+C:\Users\sega9727\Aoc\2015\9\aoc-9\aoc-9\bin\Debug\net7.0\aoc-9.deps.json
+C:\Users\sega9727\Aoc\2015\9\aoc-9\aoc-9\bin\Debug\net7.0\aoc-9.runtimeconfig.json
+C:\Users\sega9727\Aoc\2015\9\aoc-9\aoc-9\bin\Debug\net7.0\aoc-9.dll
+C:\Users\sega9727\Aoc\2015\9\aoc-9\aoc-9\bin\Debug\net7.0\aoc-9.pdb
+C:\Users\sega9727\Aoc\2015\9\aoc-9\aoc-9\obj\Debug\net7.0\aoc-9.csproj.AssemblyReference.cache
+C:\Users\sega9727\Aoc\2015\9\aoc-9\aoc-9\obj\Debug\net7.0\aoc-9.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sega9727\Aoc\2015\9\aoc-9\aoc-9\obj\Debug\net7.0\aoc-9.AssemblyInfoInputs.cache
+C:\Users\sega9727\Aoc\2015\9\aoc-9\aoc-9\obj\Debug\net7.0\aoc-9.AssemblyInfo.cs
+C:\Users\sega9727\Aoc\2015\9\aoc-9\aoc-9\obj\Debug\net7.0\aoc-9.csproj.CoreCompileInputs.cache
+C:\Users\sega9727\Aoc\2015\9\aoc-9\aoc-9\obj\Debug\net7.0\aoc-9.dll
+C:\Users\sega9727\Aoc\2015\9\aoc-9\aoc-9\obj\Debug\net7.0\refint\aoc-9.dll
+C:\Users\sega9727\Aoc\2015\9\aoc-9\aoc-9\obj\Debug\net7.0\aoc-9.pdb
+C:\Users\sega9727\Aoc\2015\9\aoc-9\aoc-9\obj\Debug\net7.0\aoc-9.genruntimeconfig.cache
+C:\Users\sega9727\Aoc\2015\9\aoc-9\aoc-9\obj\Debug\net7.0\ref\aoc-9.dll
