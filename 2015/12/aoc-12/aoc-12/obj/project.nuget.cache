@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "EMKqfdjyiegClQmGvwhRmKSkDQy6Ed/Vqk6IoFn8d4w8VLoX3lO9/cQXhgsIE1uNyFUC7AEEVf6ia7OnRWh3Zw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sega9727\\Aoc\\2015\\12\\aoc-12\\aoc-12\\aoc-12.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sega9727\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
