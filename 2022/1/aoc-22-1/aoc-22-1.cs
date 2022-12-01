@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-var watch = new System.Diagnostics.Stopwatch();
+﻿var watch = new System.Diagnostics.Stopwatch();
 watch.Start();
 var workDir = AppDomain.CurrentDomain.BaseDirectory;
 var path = new DirectoryInfo(workDir).Parent.Parent.Parent.Parent.ToString();
