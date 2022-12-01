@@ -20,9 +20,13 @@ for(int i = 0; i < input.Count; i++)
     if(i == (input.Count - 1)) calories.Add(cal);
 }
 
-var partOne = calories.OrderByDescending(x => x).First();
+var sorted = from x in calories
+             orderby x descending
+             select x;
+
+var partOne = sorted.First();
+var partTwo = sorted.Take(3).Sum();
 Console.WriteLine($"The result for part one is: {partOne}");
-var partTwo = calories.OrderByDescending(x => x).Take(3).Sum();
-watch.Stop();
 Console.WriteLine($"The result for part one is: {partTwo}");
+watch.Stop();
 Console.WriteLine($"Time is {watch.ElapsedMilliseconds} ms");
