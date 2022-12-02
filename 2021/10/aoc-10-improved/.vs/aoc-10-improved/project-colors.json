@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6328bd31-dc5a-4449-b334-64b2b68a1804": {
+      "ProjectGuid": "6328bd31-dc5a-4449-b334-64b2b68a1804",
+      "DisplayName": "aoc-10-improved",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

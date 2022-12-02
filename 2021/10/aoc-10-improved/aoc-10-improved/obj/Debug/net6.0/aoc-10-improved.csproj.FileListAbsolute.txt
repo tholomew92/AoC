@@ -1,0 +1,15 @@
+C:\Users\Sebbe\Desktop\aoc\2021\10\aoc-10-improved\aoc-10-improved\bin\Debug\net6.0\aoc-10-improved.exe
+C:\Users\Sebbe\Desktop\aoc\2021\10\aoc-10-improved\aoc-10-improved\bin\Debug\net6.0\aoc-10-improved.deps.json
+C:\Users\Sebbe\Desktop\aoc\2021\10\aoc-10-improved\aoc-10-improved\bin\Debug\net6.0\aoc-10-improved.runtimeconfig.json
+C:\Users\Sebbe\Desktop\aoc\2021\10\aoc-10-improved\aoc-10-improved\bin\Debug\net6.0\aoc-10-improved.dll
+C:\Users\Sebbe\Desktop\aoc\2021\10\aoc-10-improved\aoc-10-improved\bin\Debug\net6.0\ref\aoc-10-improved.dll
+C:\Users\Sebbe\Desktop\aoc\2021\10\aoc-10-improved\aoc-10-improved\bin\Debug\net6.0\aoc-10-improved.pdb
+C:\Users\Sebbe\Desktop\aoc\2021\10\aoc-10-improved\aoc-10-improved\obj\Debug\net6.0\aoc-10-improved.csproj.AssemblyReference.cache
+C:\Users\Sebbe\Desktop\aoc\2021\10\aoc-10-improved\aoc-10-improved\obj\Debug\net6.0\aoc-10-improved.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sebbe\Desktop\aoc\2021\10\aoc-10-improved\aoc-10-improved\obj\Debug\net6.0\aoc-10-improved.AssemblyInfoInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2021\10\aoc-10-improved\aoc-10-improved\obj\Debug\net6.0\aoc-10-improved.AssemblyInfo.cs
+C:\Users\Sebbe\Desktop\aoc\2021\10\aoc-10-improved\aoc-10-improved\obj\Debug\net6.0\aoc-10-improved.csproj.CoreCompileInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2021\10\aoc-10-improved\aoc-10-improved\obj\Debug\net6.0\aoc-10-improved.dll
+C:\Users\Sebbe\Desktop\aoc\2021\10\aoc-10-improved\aoc-10-improved\obj\Debug\net6.0\ref\aoc-10-improved.dll
+C:\Users\Sebbe\Desktop\aoc\2021\10\aoc-10-improved\aoc-10-improved\obj\Debug\net6.0\aoc-10-improved.pdb
+C:\Users\Sebbe\Desktop\aoc\2021\10\aoc-10-improved\aoc-10-improved\obj\Debug\net6.0\aoc-10-improved.genruntimeconfig.cache
