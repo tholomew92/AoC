@@ -28,7 +28,6 @@ foreach (var line in input)
     var results = result.Split('-');
     partOne += int.Parse(results[0]);
     partTwo += int.Parse(results[1]);
-    Console.WriteLine(line + " " + results[1]);
 }
 
 string XStrat(string opponent)
@@ -63,6 +62,8 @@ string ZStrat(string opponent)
         default: return "";
     }
 }
+
+
 
 Console.WriteLine($"The result for part one is: {partOne}");
 Console.WriteLine($"The result for part two is: {partTwo}");
