@@ -1,0 +1,15 @@
+C:\Users\Sebbe\Desktop\aoc\2022\3\aoc-22-3\bin\Debug\net7.0\aoc-22-3.exe
+C:\Users\Sebbe\Desktop\aoc\2022\3\aoc-22-3\bin\Debug\net7.0\aoc-22-3.deps.json
+C:\Users\Sebbe\Desktop\aoc\2022\3\aoc-22-3\bin\Debug\net7.0\aoc-22-3.runtimeconfig.json
+C:\Users\Sebbe\Desktop\aoc\2022\3\aoc-22-3\bin\Debug\net7.0\aoc-22-3.dll
+C:\Users\Sebbe\Desktop\aoc\2022\3\aoc-22-3\bin\Debug\net7.0\aoc-22-3.pdb
+C:\Users\Sebbe\Desktop\aoc\2022\3\aoc-22-3\obj\Debug\net7.0\aoc-22-3.csproj.AssemblyReference.cache
+C:\Users\Sebbe\Desktop\aoc\2022\3\aoc-22-3\obj\Debug\net7.0\aoc-22-3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sebbe\Desktop\aoc\2022\3\aoc-22-3\obj\Debug\net7.0\aoc-22-3.AssemblyInfoInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2022\3\aoc-22-3\obj\Debug\net7.0\aoc-22-3.AssemblyInfo.cs
+C:\Users\Sebbe\Desktop\aoc\2022\3\aoc-22-3\obj\Debug\net7.0\aoc-22-3.csproj.CoreCompileInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2022\3\aoc-22-3\obj\Debug\net7.0\aoc-22-3.dll
+C:\Users\Sebbe\Desktop\aoc\2022\3\aoc-22-3\obj\Debug\net7.0\refint\aoc-22-3.dll
+C:\Users\Sebbe\Desktop\aoc\2022\3\aoc-22-3\obj\Debug\net7.0\aoc-22-3.pdb
+C:\Users\Sebbe\Desktop\aoc\2022\3\aoc-22-3\obj\Debug\net7.0\aoc-22-3.genruntimeconfig.cache
+C:\Users\Sebbe\Desktop\aoc\2022\3\aoc-22-3\obj\Debug\net7.0\ref\aoc-22-3.dll
