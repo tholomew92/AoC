@@ -1,0 +1,15 @@
+C:\Users\sega9727\Aoc\2022\2\aoc-2022-2-alt\bin\Debug\net7.0\aoc-2022-2-alt.exe
+C:\Users\sega9727\Aoc\2022\2\aoc-2022-2-alt\bin\Debug\net7.0\aoc-2022-2-alt.deps.json
+C:\Users\sega9727\Aoc\2022\2\aoc-2022-2-alt\bin\Debug\net7.0\aoc-2022-2-alt.runtimeconfig.json
+C:\Users\sega9727\Aoc\2022\2\aoc-2022-2-alt\bin\Debug\net7.0\aoc-2022-2-alt.dll
+C:\Users\sega9727\Aoc\2022\2\aoc-2022-2-alt\bin\Debug\net7.0\aoc-2022-2-alt.pdb
+C:\Users\sega9727\Aoc\2022\2\aoc-2022-2-alt\obj\Debug\net7.0\aoc-2022-2-alt.csproj.AssemblyReference.cache
+C:\Users\sega9727\Aoc\2022\2\aoc-2022-2-alt\obj\Debug\net7.0\aoc-2022-2-alt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sega9727\Aoc\2022\2\aoc-2022-2-alt\obj\Debug\net7.0\aoc-2022-2-alt.AssemblyInfoInputs.cache
+C:\Users\sega9727\Aoc\2022\2\aoc-2022-2-alt\obj\Debug\net7.0\aoc-2022-2-alt.AssemblyInfo.cs
+C:\Users\sega9727\Aoc\2022\2\aoc-2022-2-alt\obj\Debug\net7.0\aoc-2022-2-alt.csproj.CoreCompileInputs.cache
+C:\Users\sega9727\Aoc\2022\2\aoc-2022-2-alt\obj\Debug\net7.0\aoc-2022-2-alt.dll
+C:\Users\sega9727\Aoc\2022\2\aoc-2022-2-alt\obj\Debug\net7.0\refint\aoc-2022-2-alt.dll
+C:\Users\sega9727\Aoc\2022\2\aoc-2022-2-alt\obj\Debug\net7.0\aoc-2022-2-alt.pdb
+C:\Users\sega9727\Aoc\2022\2\aoc-2022-2-alt\obj\Debug\net7.0\aoc-2022-2-alt.genruntimeconfig.cache
+C:\Users\sega9727\Aoc\2022\2\aoc-2022-2-alt\obj\Debug\net7.0\ref\aoc-2022-2-alt.dll

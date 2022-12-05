@@ -7,7 +7,7 @@ var input = File.ReadAllText(path + "\\input.txt").ToString();
 var calories = input.Split("\r\n\r\n").Select(cal => cal.Split("\n").Select(int.Parse).Sum()).OrderDescending();
 var partOne = calories.First();
 var partTwo = calories.Take(3).Sum();
+watch.Stop();
 Console.WriteLine($"The result for part one is: {partOne}");
 Console.WriteLine($"The result for part one is: {partTwo}");
-watch.Stop();
 Console.WriteLine($"Time is {watch.ElapsedMilliseconds} ms");

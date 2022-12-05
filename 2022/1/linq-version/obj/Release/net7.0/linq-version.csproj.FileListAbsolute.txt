@@ -1,0 +1,15 @@
+C:\Users\sega9727\Aoc\2022\1\linq-version\bin\Release\net7.0\linq-version.exe
+C:\Users\sega9727\Aoc\2022\1\linq-version\bin\Release\net7.0\linq-version.deps.json
+C:\Users\sega9727\Aoc\2022\1\linq-version\bin\Release\net7.0\linq-version.runtimeconfig.json
+C:\Users\sega9727\Aoc\2022\1\linq-version\bin\Release\net7.0\linq-version.dll
+C:\Users\sega9727\Aoc\2022\1\linq-version\bin\Release\net7.0\linq-version.pdb
+C:\Users\sega9727\Aoc\2022\1\linq-version\obj\Release\net7.0\linq-version.csproj.AssemblyReference.cache
+C:\Users\sega9727\Aoc\2022\1\linq-version\obj\Release\net7.0\linq-version.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sega9727\Aoc\2022\1\linq-version\obj\Release\net7.0\linq-version.AssemblyInfoInputs.cache
+C:\Users\sega9727\Aoc\2022\1\linq-version\obj\Release\net7.0\linq-version.AssemblyInfo.cs
+C:\Users\sega9727\Aoc\2022\1\linq-version\obj\Release\net7.0\linq-version.csproj.CoreCompileInputs.cache
+C:\Users\sega9727\Aoc\2022\1\linq-version\obj\Release\net7.0\linq-version.dll
+C:\Users\sega9727\Aoc\2022\1\linq-version\obj\Release\net7.0\refint\linq-version.dll
+C:\Users\sega9727\Aoc\2022\1\linq-version\obj\Release\net7.0\linq-version.pdb
+C:\Users\sega9727\Aoc\2022\1\linq-version\obj\Release\net7.0\linq-version.genruntimeconfig.cache
+C:\Users\sega9727\Aoc\2022\1\linq-version\obj\Release\net7.0\ref\linq-version.dll
