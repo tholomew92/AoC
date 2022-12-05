@@ -7,9 +7,5 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = aoc_2022_2
-<<<<<<< HEAD
-build_property.ProjectDir = C:\Users\sega9727\Aoc\2022\2\aoc-2022-2\aoc-2022-2\
-=======
-build_property.ProjectDir = C:\Users\Sebbe\Desktop\aoc\2022\2\aoc-2022-2\aoc-2022-2\
->>>>>>> f4dcd2f0fc45db3dca521c8d846385cc563a676d
+build_property.RootNamespace = aoc_22_4
+build_property.ProjectDir = C:\Users\Sebbe\Desktop\aoc\2022\4\aoc-22-4\

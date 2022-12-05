@@ -64,8 +64,8 @@ string ZStrat(string opponent)
 }
 
 
+watch.Stop();
 
 Console.WriteLine($"The result for part one is: {partOne}");
 Console.WriteLine($"The result for part two is: {partTwo}");
-watch.Stop();
 Console.WriteLine($"Time is {watch.ElapsedMilliseconds} ms");

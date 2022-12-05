@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\sega9727\Aoc\2022\2\aoc-2022-2\aoc-2022-2\bin\Release\net7.0\aoc-2022-2.exe
 C:\Users\sega9727\Aoc\2022\2\aoc-2022-2\aoc-2022-2\bin\Release\net7.0\aoc-2022-2.deps.json
 C:\Users\sega9727\Aoc\2022\2\aoc-2022-2\aoc-2022-2\bin\Release\net7.0\aoc-2022-2.runtimeconfig.json
@@ -13,3 +14,20 @@ C:\Users\sega9727\Aoc\2022\2\aoc-2022-2\aoc-2022-2\obj\Release\net7.0\refint\aoc
 C:\Users\sega9727\Aoc\2022\2\aoc-2022-2\aoc-2022-2\obj\Release\net7.0\aoc-2022-2.pdb
 C:\Users\sega9727\Aoc\2022\2\aoc-2022-2\aoc-2022-2\obj\Release\net7.0\aoc-2022-2.genruntimeconfig.cache
 C:\Users\sega9727\Aoc\2022\2\aoc-2022-2\aoc-2022-2\obj\Release\net7.0\ref\aoc-2022-2.dll
+=======
+C:\Users\Sebbe\Desktop\aoc\2022\2\aoc-2022-2\aoc-2022-2\bin\Release\net7.0\aoc-2022-2.exe
+C:\Users\Sebbe\Desktop\aoc\2022\2\aoc-2022-2\aoc-2022-2\bin\Release\net7.0\aoc-2022-2.deps.json
+C:\Users\Sebbe\Desktop\aoc\2022\2\aoc-2022-2\aoc-2022-2\bin\Release\net7.0\aoc-2022-2.runtimeconfig.json
+C:\Users\Sebbe\Desktop\aoc\2022\2\aoc-2022-2\aoc-2022-2\bin\Release\net7.0\aoc-2022-2.dll
+C:\Users\Sebbe\Desktop\aoc\2022\2\aoc-2022-2\aoc-2022-2\bin\Release\net7.0\aoc-2022-2.pdb
+C:\Users\Sebbe\Desktop\aoc\2022\2\aoc-2022-2\aoc-2022-2\obj\Release\net7.0\aoc-2022-2.csproj.AssemblyReference.cache
+C:\Users\Sebbe\Desktop\aoc\2022\2\aoc-2022-2\aoc-2022-2\obj\Release\net7.0\aoc-2022-2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sebbe\Desktop\aoc\2022\2\aoc-2022-2\aoc-2022-2\obj\Release\net7.0\aoc-2022-2.AssemblyInfoInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2022\2\aoc-2022-2\aoc-2022-2\obj\Release\net7.0\aoc-2022-2.AssemblyInfo.cs
+C:\Users\Sebbe\Desktop\aoc\2022\2\aoc-2022-2\aoc-2022-2\obj\Release\net7.0\aoc-2022-2.csproj.CoreCompileInputs.cache
+C:\Users\Sebbe\Desktop\aoc\2022\2\aoc-2022-2\aoc-2022-2\obj\Release\net7.0\aoc-2022-2.dll
+C:\Users\Sebbe\Desktop\aoc\2022\2\aoc-2022-2\aoc-2022-2\obj\Release\net7.0\refint\aoc-2022-2.dll
+C:\Users\Sebbe\Desktop\aoc\2022\2\aoc-2022-2\aoc-2022-2\obj\Release\net7.0\aoc-2022-2.pdb
+C:\Users\Sebbe\Desktop\aoc\2022\2\aoc-2022-2\aoc-2022-2\obj\Release\net7.0\aoc-2022-2.genruntimeconfig.cache
+C:\Users\Sebbe\Desktop\aoc\2022\2\aoc-2022-2\aoc-2022-2\obj\Release\net7.0\ref\aoc-2022-2.dll
+>>>>>>> f4dcd2f0fc45db3dca521c8d846385cc563a676d
