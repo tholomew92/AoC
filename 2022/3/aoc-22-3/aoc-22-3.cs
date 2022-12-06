@@ -18,7 +18,8 @@ for (int i = 0; i < input.Count; i++)
     var common = first.Intersect(second).Single();
 
     partOne += Array.IndexOf(letterList, common);
-    if(i%3 == 0)
+    
+    if (i%3 == 0)
     {
         var intersect = line.Intersect(input[i + 1].Intersect(input[i + 2])).Single();
         partTwo += Array.IndexOf(letterList, intersect);
