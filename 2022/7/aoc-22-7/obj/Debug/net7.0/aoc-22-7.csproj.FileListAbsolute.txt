@@ -1,0 +1,15 @@
+C:\Users\sega9727\Aoc\2022\7\aoc-22-7\bin\Debug\net7.0\aoc-22-7.exe
+C:\Users\sega9727\Aoc\2022\7\aoc-22-7\bin\Debug\net7.0\aoc-22-7.deps.json
+C:\Users\sega9727\Aoc\2022\7\aoc-22-7\bin\Debug\net7.0\aoc-22-7.runtimeconfig.json
+C:\Users\sega9727\Aoc\2022\7\aoc-22-7\bin\Debug\net7.0\aoc-22-7.dll
+C:\Users\sega9727\Aoc\2022\7\aoc-22-7\bin\Debug\net7.0\aoc-22-7.pdb
+C:\Users\sega9727\Aoc\2022\7\aoc-22-7\obj\Debug\net7.0\aoc-22-7.csproj.AssemblyReference.cache
+C:\Users\sega9727\Aoc\2022\7\aoc-22-7\obj\Debug\net7.0\aoc-22-7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sega9727\Aoc\2022\7\aoc-22-7\obj\Debug\net7.0\aoc-22-7.AssemblyInfoInputs.cache
+C:\Users\sega9727\Aoc\2022\7\aoc-22-7\obj\Debug\net7.0\aoc-22-7.AssemblyInfo.cs
+C:\Users\sega9727\Aoc\2022\7\aoc-22-7\obj\Debug\net7.0\aoc-22-7.csproj.CoreCompileInputs.cache
+C:\Users\sega9727\Aoc\2022\7\aoc-22-7\obj\Debug\net7.0\aoc-22-7.dll
+C:\Users\sega9727\Aoc\2022\7\aoc-22-7\obj\Debug\net7.0\refint\aoc-22-7.dll
+C:\Users\sega9727\Aoc\2022\7\aoc-22-7\obj\Debug\net7.0\aoc-22-7.pdb
+C:\Users\sega9727\Aoc\2022\7\aoc-22-7\obj\Debug\net7.0\aoc-22-7.genruntimeconfig.cache
+C:\Users\sega9727\Aoc\2022\7\aoc-22-7\obj\Debug\net7.0\ref\aoc-22-7.dll
