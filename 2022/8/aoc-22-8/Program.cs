@@ -66,13 +66,14 @@ for (int y = 1; y < input.Count - 1; y++)
 
 var timeTwo = watch.Elapsed - timeOne - parse;
 watch.Stop();
+Console.WriteLine($"The time for parsing input is: {FormattedTime(parse)}");
 Console.WriteLine($"The result for part one is: {partOne}");
-Console.WriteLine($"The time for part one is {FormatteddTime(timeOne)} ms");
+Console.WriteLine($"The time for part one is {FormattedTime(timeOne)} ms");
 Console.WriteLine($"The result for part two is: {partTwo}");
-Console.WriteLine($"The time for part two is {FormatteddTime(timeTwo)} ms");
-Console.WriteLine($"Total time is {FormatteddTime(watch.Elapsed)} ms");
+Console.WriteLine($"The time for part two is {FormattedTime(timeTwo)} ms");
+Console.WriteLine($"Total time is {FormattedTime(watch.Elapsed)} ms");
 
-String FormatteddTime(TimeSpan ts)
+String FormattedTime(TimeSpan ts)
 {
     var temp = ts.ToString("fffffff");
     var count = 0;
