@@ -76,16 +76,21 @@ foreach (var line in input)
         {
             listTwo.Add(value);
         }
-        for (int j = 0; j < numbers.Length; j++)
+        else
         {
-            var num = numbers[j];
-            int startInd = i - num.Length + 1;
-            if ( startInd >= 0 && line.Substring(startInd, num.Length).Equals(num))
+            for (int j = 0; j < numbers.Length; j++)
             {
-                listTwo.Add(j);
-            }
+                var num = numbers[j];
+                int startInd = i - num.Length + 1;
+                if (startInd >= 0 && line.Substring(startInd, num.Length).Equals(num))
+                {
+                    listTwo.Add(j);
+                    break;
+                }
 
+            }
         }
+        
         if (listTwo.Count > 1)
         {
             break;
