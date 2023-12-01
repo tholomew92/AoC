@@ -1,0 +1,15 @@
+C:\AoC\AoC\2023\1\Mall1\bin\Debug\net7.0\Mall1.exe
+C:\AoC\AoC\2023\1\Mall1\bin\Debug\net7.0\Mall1.deps.json
+C:\AoC\AoC\2023\1\Mall1\bin\Debug\net7.0\Mall1.runtimeconfig.json
+C:\AoC\AoC\2023\1\Mall1\bin\Debug\net7.0\Mall1.dll
+C:\AoC\AoC\2023\1\Mall1\bin\Debug\net7.0\Mall1.pdb
+C:\AoC\AoC\2023\1\Mall1\obj\Debug\net7.0\Mall1.GeneratedMSBuildEditorConfig.editorconfig
+C:\AoC\AoC\2023\1\Mall1\obj\Debug\net7.0\Mall1.AssemblyInfoInputs.cache
+C:\AoC\AoC\2023\1\Mall1\obj\Debug\net7.0\Mall1.AssemblyInfo.cs
+C:\AoC\AoC\2023\1\Mall1\obj\Debug\net7.0\Mall1.csproj.CoreCompileInputs.cache
+C:\AoC\AoC\2023\1\Mall1\obj\Debug\net7.0\Mall1.sourcelink.json
+C:\AoC\AoC\2023\1\Mall1\obj\Debug\net7.0\Mall1.dll
+C:\AoC\AoC\2023\1\Mall1\obj\Debug\net7.0\refint\Mall1.dll
+C:\AoC\AoC\2023\1\Mall1\obj\Debug\net7.0\Mall1.pdb
+C:\AoC\AoC\2023\1\Mall1\obj\Debug\net7.0\Mall1.genruntimeconfig.cache
+C:\AoC\AoC\2023\1\Mall1\obj\Debug\net7.0\ref\Mall1.dll
