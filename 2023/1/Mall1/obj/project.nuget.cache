@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1qV22JdPuYKc5QbR35QtJ8YzQX2sZpkkqcDw/Jcxu27etMk2Xi9ASErsfVa7ppmDeUpXgBPk/Zg9y3md2T20VQ==",
+  "dgSpecHash": "l+rdz0mcD552ukKfH6qhQiBUqM7WeYBvttwqvDTkmW/aRFMdXzeeSK10tgrUqyuTePvjR9IfXVZLgKJYWaBU1Q==",
   "success": true,
-  "projectFilePath": "C:\\AoC\\AoC\\2023\\1\\Mall1\\aoc-23-1.csproj",
+  "projectFilePath": "C:\\Aoc\\AoC\\2023\\1\\Mall1\\aoc-23-1.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,0 +1,15 @@
+C:\Aoc\AoC\2023\1\Mall1\bin\Debug\net8.0\aoc-23-1.exe
+C:\Aoc\AoC\2023\1\Mall1\bin\Debug\net8.0\aoc-23-1.deps.json
+C:\Aoc\AoC\2023\1\Mall1\bin\Debug\net8.0\aoc-23-1.runtimeconfig.json
+C:\Aoc\AoC\2023\1\Mall1\bin\Debug\net8.0\aoc-23-1.dll
+C:\Aoc\AoC\2023\1\Mall1\bin\Debug\net8.0\aoc-23-1.pdb
+C:\Aoc\AoC\2023\1\Mall1\obj\Debug\net8.0\aoc-23-1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Aoc\AoC\2023\1\Mall1\obj\Debug\net8.0\aoc-23-1.AssemblyInfoInputs.cache
+C:\Aoc\AoC\2023\1\Mall1\obj\Debug\net8.0\aoc-23-1.AssemblyInfo.cs
+C:\Aoc\AoC\2023\1\Mall1\obj\Debug\net8.0\aoc-23-1.csproj.CoreCompileInputs.cache
+C:\Aoc\AoC\2023\1\Mall1\obj\Debug\net8.0\aoc-23-1.sourcelink.json
+C:\Aoc\AoC\2023\1\Mall1\obj\Debug\net8.0\aoc-23-1.dll
+C:\Aoc\AoC\2023\1\Mall1\obj\Debug\net8.0\refint\aoc-23-1.dll
+C:\Aoc\AoC\2023\1\Mall1\obj\Debug\net8.0\aoc-23-1.pdb
+C:\Aoc\AoC\2023\1\Mall1\obj\Debug\net8.0\aoc-23-1.genruntimeconfig.cache
+C:\Aoc\AoC\2023\1\Mall1\obj\Debug\net8.0\ref\aoc-23-1.dll
