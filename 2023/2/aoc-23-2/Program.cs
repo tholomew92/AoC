@@ -19,6 +19,9 @@ var maxBlue = 14;
 
 foreach(var line in input)
 {
+    var minRed = 0;
+    var minGreen = 0;
+    var minBlue = 0;
     var index  = line.IndexOf(':')+1;
     var data = line.Substring(index);
     var split = data.Split(';', StringSplitOptions.TrimEntries);
@@ -32,71 +35,38 @@ foreach(var line in input)
             switch (cube[1])
             {
                 case "red":
+                    if (int.Parse(cube[0]) > minRed) minRed = int.Parse(cube[0]);
                     if (int.Parse(cube[0]) > maxRed) valid = false;
                     break;
                 case "green":
+                    if (int.Parse(cube[0]) > minGreen) minGreen = int.Parse(cube[0]);
                     if (int.Parse(cube[0]) > maxGreen) valid = false;
                     break;
                 case "blue":
+                    if (int.Parse(cube[0]) > minBlue) minBlue = int.Parse(cube[0]);
                     if (int.Parse(cube[0]) > maxBlue) valid = false;
                     break;
                 default:
                     break;
             }
         }
-
-        if (!valid) break;
     }
     if (valid)
     {
         var gameNr = line.Substring(0, index - 1).Split(' ');
         partOne += int.Parse(gameNr[1]);
     }
+    partTwo += (minRed * minGreen * minBlue);
 }
 
 var timeOne = watch.Elapsed - parse;
 
 
-foreach (var line in input)
-{
-    var minRed = 0;
-    var minGreen = 0;
-    var minBlue = 0;
-    var index = line.IndexOf(':') + 1;
-    var data = line.Substring(index);
-    var split = data.Split(';', StringSplitOptions.TrimEntries);
-    foreach (var item in split)
-    {
-        var cubes = item.Split(',', StringSplitOptions.TrimEntries);
-        foreach (var c in cubes)
-        {
-            var cube = c.Split(' ');
-            switch (cube[1])
-            {
-                case "red":
-                    if (int.Parse(cube[0]) > minRed) minRed = int.Parse(cube[0]);
-                    break;
-                case "green":
-                    if (int.Parse(cube[0]) > minGreen) minGreen = int.Parse(cube[0]);
-                    break;
-                case "blue":
-                    if (int.Parse(cube[0]) > minBlue) minBlue = int.Parse(cube[0]);
-                    break;
-                default:
-                    break;
-            }
-        }
-
-    }
-    partTwo += (minRed*minGreen*minBlue);
-}
-var timeTwo = watch.Elapsed - timeOne - parse;
 watch.Stop();
 Console.WriteLine($"The time for parsing input is: {FormattedTime(parse)}");
 Console.WriteLine($"The result for part one is: {partOne}");
-Console.WriteLine($"The time for part one is {FormattedTime(timeOne)}");
 Console.WriteLine($"The result for part two is: {partTwo}");
-Console.WriteLine($"The time for part two is {FormattedTime(timeTwo)}");
+Console.WriteLine($"The time for day two is {FormattedTime(timeOne)}");
 Console.WriteLine($"Total time is {FormattedTime(watch.Elapsed)}");
 
 string FormattedTime(TimeSpan ts)
@@ -109,9 +79,9 @@ string FormattedTime(TimeSpan ts)
         else break;
     }
     var formatted = temp.Substring(count);
-    if (formatted.Length > 4)
+    if (formatted.Length > 3)
     {
-        formatted = formatted.Insert(formatted.Length - 4, ",");
+        formatted = formatted.Insert(formatted.Length - 3, ",");
         formatted += " ms";
     }
     else
