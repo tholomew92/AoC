@@ -8,7 +8,7 @@ var path = new DirectoryInfo(workDir).Parent.Parent.Parent.ToString();
 var inputDat = File.ReadAllLines(path + "\\input.txt").ToList();
 var testData = File.ReadAllLines(path + "\\test.txt").ToList();
 
-var input = inputDat;
+var input = testData;
 
 var partOne = 0;
 var partTwo = 0;
@@ -60,6 +60,24 @@ for(int i = 0; i < ySize; i++)
 
 var timeOne = watch.Elapsed - parse;
 
+for (int i = 0; i < ySize; i++)
+{
+    var line = input[i];
+    var rowsum = 0;
+    for (int j = 0; j < xSize; j++)
+    {
+        var nextX = 0;
+        var c = matrix[i, j];
+        if (c.Equals('*'))
+        {
+            partTwo += CheckGear(i, j);
+        }
+        
+    }
+    //if (i == 9) break;
+}
+
+
 var timeTwo = watch.Elapsed - timeOne - parse;
 
 int AmountOfNums(int y, int x)
@@ -97,6 +115,11 @@ bool CheckNeighbours(int row, int startX, int endX)
         }
     }
     return false;
+}
+int CheckGear(int row, int col)
+{
+
+    return 0;
 }
 
 watch.Stop();
