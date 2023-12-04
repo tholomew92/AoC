@@ -55,15 +55,18 @@ foreach (var line in input)
         {
             listTwo.Add(value);
         }
-        for (int j = 0; j < numbers.Length; j++)
+        else
         {
-            var num = numbers[j];
-            if (line.Length - i >= num.Length && line.Substring(i, num.Length).Equals(num))
+            for (int j = 0; j < numbers.Length; j++)
             {
-                listTwo.Add(j);
-            }
+                var num = numbers[j];
+                if (line.Length - i >= num.Length && line.Substring(i, num.Length).Equals(num))
+                {
+                    listTwo.Add(j);
+                    break;
+                }
 
-        }
+            }
         if(listTwo.Count > 0)
         {
             break;
