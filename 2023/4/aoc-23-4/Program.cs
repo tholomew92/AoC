@@ -53,6 +53,7 @@ for(int i = 0; i < input.Count; i++)
     {
         if (winning.Contains(play)) value++;
     }
+    //value = playing.Intersect(winning).ToList().Count();
     for(int j = 1; j <= value; j++)
     {
         if (!dict.ContainsKey(i + j)) dict.Add(i + j, 1 + dict[i]);

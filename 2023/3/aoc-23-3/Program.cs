@@ -8,15 +8,12 @@ var path = new DirectoryInfo(workDir).Parent.Parent.Parent.ToString();
 var inputDat = File.ReadAllLines(path + "\\input.txt").ToList();
 var testData = File.ReadAllLines(path + "\\test.txt").ToList();
 
-var input = testData;
+var input = inputDat;
 
 var partOne = 0;
 var partTwo = 0;
 var ySize = input.Count;
 var xSize = input[0].Length;
-
-Console.WriteLine("y: " + ySize + ", x: " + xSize);
-
 var matrix = new char[ySize,xSize];
 for (int i = 0; i < ySize; i++)
 {
@@ -30,27 +27,35 @@ var parse = watch.Elapsed;
 for(int i = 0; i < ySize; i++)
 {
     var line = input[i];
+    var rowsum = 0;
     for (int j = 0; j < xSize; j++)
     {
         var nextX = 0;
-        var c = matrix[i,j];
+        var c = matrix[i, j];
         string num = "";
         if (int.TryParse(c.ToString(), out int a))
         {
             nextX = AmountOfNums(i, j);
         }
         else continue;
-        Console.WriteLine(nextX);
-        for(int k = 0; k < xSize - j; k++)
+        for (int k = j; k <= nextX; k++)
         {
             num += matrix[i, k].ToString();
         }
-        Console.WriteLine(num + ": " + j + " - " + nextX);
-        if ((j + nextX) < xSize - 1) j += nextX;
-        else break;
-    //Console.WriteLine(num);
-}
-    Console.WriteLine();
+        var check = CheckNeighbours(i, j, nextX);
+        if (check) 
+        {
+            //Console.WriteLine(num);
+            partOne += int.Parse(num);
+            rowsum += int.Parse(num);
+        }
+        if ((nextX) >= xSize - 1) break;
+        else if (nextX != 0) 
+        {
+            j = nextX+1; 
+        }
+    }
+    //if (i == 9) break;
 }
 
 var timeOne = watch.Elapsed - parse;
@@ -59,7 +64,7 @@ var timeTwo = watch.Elapsed - timeOne - parse;
 
 int AmountOfNums(int y, int x)
 {
-    if (x < xSize - 2) {
+    if (x < xSize - 1) {
         if (int.TryParse(matrix[y, x+1].ToString(), out int a))
         {
             return AmountOfNums(y, x+1);
@@ -72,6 +77,27 @@ int AmountOfNums(int y, int x)
     return x;
 }
 
+bool CheckNeighbours(int row, int startX, int endX)
+{
+    int minRow, maxRow, minX, maxX;
+    if (row == 0) minRow = row;
+    else minRow = row - 1;
+    if (row == ySize - 1) maxRow = row;
+    else maxRow = row + 1;
+    if (startX == 0) minX = startX;
+    else minX = startX - 1;
+    if (endX == xSize - 1) maxX = endX;
+    else maxX = endX + 1;
+    for(int i = minRow; i <= maxRow; i++)
+    {
+        for(int j = minX; j <= maxX; j++)
+        {
+            if (i == row && startX <= j && j <= endX) continue;
+            else if (!matrix[i, j].Equals('.')) return true;
+        }
+    }
+    return false;
+}
 
 watch.Stop();
 Console.WriteLine($"The time for parsing input is: {FormattedTime(parse)}");
