@@ -1,14 +1,15 @@
 ﻿using System.Runtime.CompilerServices;
+using System.Text;
 using static System.Net.Mime.MediaTypeNames;
 
 var watch = new System.Diagnostics.Stopwatch();
 watch.Start();
 var workDir = AppDomain.CurrentDomain.BaseDirectory;
 var path = new DirectoryInfo(workDir).Parent.Parent.Parent.ToString();
-var inputDat = File.ReadAllLines(path + "\\input.txt").ToList();
+var inputData = File.ReadAllLines(path + "\\input.txt").ToList();
 var testData = File.ReadAllLines(path + "\\test.txt").ToList();
 
-var input = testData;
+var input = inputData;
 
 var partOne = 0;
 var partTwo = 0;
@@ -74,7 +75,6 @@ for (int i = 0; i < ySize; i++)
         }
         
     }
-    //if (i == 9) break;
 }
 
 
@@ -118,8 +118,84 @@ bool CheckNeighbours(int row, int startX, int endX)
 }
 int CheckGear(int row, int col)
 {
+    int minRow, maxRow, minCol, maxCol;
+    if (row == 0) minRow = col;
+    else minRow = row - 1;
+    if (row == xSize - 1) maxRow= col;
+    else maxRow = row + 1;
+    if (col == 0) minCol = col;
+    else minCol = col - 1;
+    if (col == xSize - 1) maxCol = col;
+    else maxCol = col + 1;
 
+    int found = 0;
+    int value = 1;
+    for (int i = minRow; i <= maxRow; i++)
+    {
+        for (int j = minCol; j <= maxCol; j++)
+        {
+            if (found > 2) break;
+            if (i == row && j == col) continue;
+            (int start, int end) num;
+            if (int.TryParse(matrix[i, j].ToString(), out int _))
+            {
+                found++;
+                num = GetNumber(i, j);
+                var val = "";
+                for (int k = num.start; k < num.end; k++)
+                {
+                    val = val + matrix[i, k];
+                }
+                //Console.WriteLine(val);
+                j = num.end;
+                if (int.TryParse(val, out int v)) value *= v;
+            }
+        }
+    }
+    if (found == 2)
+    {
+        Console.WriteLine(value);
+        Console.WriteLine();
+        return value;
+    }
+    Console.WriteLine();
     return 0;
+}
+
+(int,int) GetNumber(int row, int startPos)
+{
+    var num = matrix[row, startPos].ToString();
+    int startX, endX;
+    startX = endX = 0;
+    if (startPos != 0)
+    {
+        for(int i = startPos-1; i >= 0; i--)
+        {
+            if (int.TryParse(matrix[row, i].ToString(), out int _)) continue;
+            else
+            {
+                startX = i+1;
+                break;
+            }
+        }
+    }
+    if (startPos != xSize - 1)
+    {
+        for(int i = startPos+1; i <= xSize -1; i++)
+        {
+            if (int.TryParse(matrix[row, i].ToString(), out int _)) continue;
+            else
+            {
+                endX = i;
+                break;
+            }
+        }
+    }
+    else
+    {
+        endX = startPos;
+    }
+    return (startX, endX);
 }
 
 watch.Stop();
