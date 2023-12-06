@@ -8,7 +8,7 @@ var path = new DirectoryInfo(workDir).Parent.Parent.Parent.ToString();
 var inputData = File.ReadAllLines(path + "\\input.txt").ToList();
 var testData = File.ReadAllLines(path + "\\test.txt").ToList();
 
-var input = testData;
+var input = inputData;
 
 var partOne = Int64.MaxValue;
 var partTwo = Int64.MaxValue;
@@ -17,9 +17,32 @@ var parse = watch.Elapsed;
 
 var split = input[0].Split(':', StringSplitOptions.TrimEntries);
 var seeds = split[1].Split(" ", StringSplitOptions.TrimEntries);
+
+var rangeList = new List<RangeList>();
+var temp = new RangeList();
+for(int i = 2; i < input.Count; i++)
+{  
+    var line = input[i];
+    if (line.Contains("map"))
+    {
+        rangeList.Add(temp);
+        temp = new RangeList();
+    }
+    else if (string.IsNullOrEmpty(line)) continue;
+    else
+    {
+        var parameters = line.Split(' ', StringSplitOptions.TrimEntries);
+        var destination = Int64.Parse(parameters[0]);
+        var source = Int64.Parse(parameters[1]);
+        var end = source+Int64.Parse(parameters[2]) - 1;
+        var r = new Range(source, destination, end);
+        temp.AddRange(r);
+    }
+}
+rangeList.Add(temp);
 // PART ONE
 var seedList = new List<List<Int64>>();
-
+Console.WriteLine("Part One");
 foreach (var seed in seeds)
 {
     var list = new List<Int64>();
@@ -83,9 +106,9 @@ var timeOneSecond = watch.Elapsed - timeOne - parse;
 
 
 // PART TWO
-
-
+Console.WriteLine("Part Two");
 var ranges = new Dictionary<Int64, Int64>();
+
 for (int i = 0; i < seeds.Length; i += 2)
 {
     var start = Int64.Parse(seeds[i]);
@@ -93,21 +116,21 @@ for (int i = 0; i < seeds.Length; i += 2)
     ranges.Add(start, stop);
 }
 
-for (int i = 0; i < int.MaxValue; i++)
+
+foreach (var range in ranges)
 {
-    bool done = false;
-    foreach (var range in ranges)
+    Int64 stop = range.Key + range.Value;
+    for (Int64 i = range.Key; i < stop; i++)
     {
-        Int64 val = GetSeed(i);
-        if (range.Key <= val && val <= range.Value)
+        Int64 val = GetLocation(i);
+        if (val < partTwo)
         {
             partTwo = val;
-            done = true;
-            break;
         }
+
     }
-    if (done) break;
 }
+
 
 var timeTwo = watch.Elapsed - timeOneSecond - timeOne - parse;
 watch.Stop();
@@ -147,81 +170,61 @@ string FormattedTime(TimeSpan ts)
 Int64 GetLocation(Int64 seed)
 {
     //Console.WriteLine($"Seed is {seed}");
-    var check = false;
     Int64 val = seed;
-    for (int i = 1; i < input.Count; i++)
+    foreach(var range in rangeList)
     {
-        var line = input[i];
-        if (line.Contains("map"))
-        {
-            check = false;
-        }
-        else if (String.IsNullOrEmpty(line)) continue;
-        else
-        {
-            var parameters = line.Split(' ', StringSplitOptions.TrimEntries);
-            var destination = Int64.Parse(parameters[0]);
-            var source = Int64.Parse(parameters[1]);
-            var range = source + Int64.Parse(parameters[2]) - 1;
-
-            if (check) continue;
-            else
-            {
-                if (source <= val && val <= range)
-                {
-                    {
-                        check = true;
-                        val =  destination + (val - source);
-                        //Console.WriteLine($"{destination} + ({val} - {source}) = {val}");
-                    }
-                }
-                else if(!check)
-                {
-                    //Console.WriteLine($"{source} and {range} does not contain {val}");
-                }
-            }
-        }
+        val = range.InRange(val);
     }
     //Console.WriteLine();
     return val;
 }
 
-Int64 GetSeed(Int64 location)
+class Range
 {
-    //Console.WriteLine($"Seed is {seed}");
-    Int64 val = location;
-    
-    for (int i = 0; i < int.MaxValue; i++)
+    Int64 source;
+    Int64 destination;
+    Int64 end;
+
+    public Range(Int64 source, Int64 destination, Int64 end)
     {
-        Int64 temp = -1;
-        var check = false;
-        for (int j = input.Count-1; i > 0; i--)
+        this.source = source;
+        this.destination = destination;
+        this.end = end;
+    }
+
+    public Int64 InRange(Int64 value)
+    {
+        //Console.WriteLine($"Checking if {value} is between {source} and {end}");
+        if (source <= value && value <= end)  
         {
-            var line = input[j];
-            if (line.Contains("map"))
-            {
-                if (temp != -1)
-                {
-                    val = temp;
-                    temp = -1;
-                }
-                check = false;
-            }
-            else if (String.IsNullOrEmpty(line)) continue;
-            else
-            {
-                var parameters = line.Split(' ', StringSplitOptions.TrimEntries);
-                var destination = Int64.Parse(parameters[0]);
-                var source = Int64.Parse(parameters[1]);
-                var range = source + Int64.Parse(parameters[2]) - 1;
+            //Console.WriteLine($"Yes it is now, {destination + (value - source)}");
+            return destination + (value - source); 
+        }
+        return value;
+    }
+}
+class RangeList
+{
+    List<Range> ranges = new List<Range>();
 
-                if (source <= location && location <= range)
-                {
-
-                }
+    public RangeList()
+    {
+    }
+    public void AddRange(Range range)
+    {
+        this.ranges.Add(range);
+    }
+    public Int64 InRange(Int64 value)
+    {
+        //Console.WriteLine();
+        for (int i = 0; i < ranges.Count; i++)
+        {
+            var val = ranges[i].InRange(value);
+            if (val != value) {
+                //Console.WriteLine("Hit");
+                return val; 
             }
         }
+        return value;
     }
-    //Console.WriteLine();
-    return val;
 }
