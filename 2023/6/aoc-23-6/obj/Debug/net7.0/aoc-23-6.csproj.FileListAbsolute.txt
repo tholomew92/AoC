@@ -1,0 +1,15 @@
+C:\AoC\AoC\2023\6\aoc-23-6\bin\Debug\net7.0\aoc-23-6.exe
+C:\AoC\AoC\2023\6\aoc-23-6\bin\Debug\net7.0\aoc-23-6.deps.json
+C:\AoC\AoC\2023\6\aoc-23-6\bin\Debug\net7.0\aoc-23-6.runtimeconfig.json
+C:\AoC\AoC\2023\6\aoc-23-6\bin\Debug\net7.0\aoc-23-6.dll
+C:\AoC\AoC\2023\6\aoc-23-6\bin\Debug\net7.0\aoc-23-6.pdb
+C:\AoC\AoC\2023\6\aoc-23-6\obj\Debug\net7.0\aoc-23-6.GeneratedMSBuildEditorConfig.editorconfig
+C:\AoC\AoC\2023\6\aoc-23-6\obj\Debug\net7.0\aoc-23-6.AssemblyInfoInputs.cache
+C:\AoC\AoC\2023\6\aoc-23-6\obj\Debug\net7.0\aoc-23-6.AssemblyInfo.cs
+C:\AoC\AoC\2023\6\aoc-23-6\obj\Debug\net7.0\aoc-23-6.csproj.CoreCompileInputs.cache
+C:\AoC\AoC\2023\6\aoc-23-6\obj\Debug\net7.0\aoc-23-6.sourcelink.json
+C:\AoC\AoC\2023\6\aoc-23-6\obj\Debug\net7.0\aoc-23-6.dll
+C:\AoC\AoC\2023\6\aoc-23-6\obj\Debug\net7.0\refint\aoc-23-6.dll
+C:\AoC\AoC\2023\6\aoc-23-6\obj\Debug\net7.0\aoc-23-6.pdb
+C:\AoC\AoC\2023\6\aoc-23-6\obj\Debug\net7.0\aoc-23-6.genruntimeconfig.cache
+C:\AoC\AoC\2023\6\aoc-23-6\obj\Debug\net7.0\ref\aoc-23-6.dll
