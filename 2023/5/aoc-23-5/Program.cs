@@ -93,6 +93,14 @@ var timeOne = watch.Elapsed - parse;
 
 // PART ONE SECOND
 
+var ranges = new Dictionary<Int64, Int64>();
+
+for (int i = 0; i < seeds.Length; i++)
+{
+    var start = Int64.Parse(seeds[i]);
+    ranges.Add(start, 1);
+}
+
 var partOneSecond = Int64.MaxValue;
 for (int i = 0; i < seeds.Length; i ++)
 {
@@ -100,6 +108,17 @@ for (int i = 0; i < seeds.Length; i ++)
     Int64 value = GetLocation(seed);
     if (value < partTwo) partOneSecond = value;
 }
+/*
+for(Int64 i = 0; i < Int64.MaxValue; i++)
+{
+    Console.WriteLine($"Checking if {i} is valid");
+    var val = GetSeed(i);
+    if (val != -1) 
+    {
+        partOneSecond = i;
+        break; 
+    }
+}*/
 
 
 var timeOneSecond = watch.Elapsed - timeOne - parse;
@@ -107,7 +126,7 @@ var timeOneSecond = watch.Elapsed - timeOne - parse;
 
 // PART TWO
 Console.WriteLine("Part Two");
-var ranges = new Dictionary<Int64, Int64>();
+ranges = new Dictionary<Int64, Int64>();
 
 for (int i = 0; i < seeds.Length; i += 2)
 {
@@ -117,6 +136,17 @@ for (int i = 0; i < seeds.Length; i += 2)
 }
 
 
+for(Int64 i = 0; i <= Int64.MaxValue; i++)
+{
+    //Console.WriteLine($"Checking if {i} is valid");
+    partTwo = GetSeed(i);
+    if (partTwo != -1)
+    {
+        partTwo = i;
+        break;
+    }
+}
+/*
 foreach (var range in ranges)
 {
     Int64 stop = range.Key + range.Value;
@@ -129,7 +159,7 @@ foreach (var range in ranges)
         }
 
     }
-}
+}*/
 
 
 var timeTwo = watch.Elapsed - timeOneSecond - timeOne - parse;
@@ -179,6 +209,30 @@ Int64 GetLocation(Int64 seed)
     return val;
 }
 
+
+Int64 GetSeed(Int64 location)
+{
+    Int64 val = location;
+    for(int i = rangeList.Count - 1; i >= 0; i--)
+    {
+        var range = rangeList[i];
+        val = range.SourceRange(val);
+    }
+
+    foreach(var range in ranges)
+    {
+        var stop = range.Key + range.Value;
+        if (range.Key <= val && val <= stop)
+        {
+            //Console.WriteLine($"Hit with {val} being in between {range.Key} and {stop}");
+            return val;
+        }
+    }
+
+
+    return -1;
+}
+
 class Range
 {
     Int64 source;
@@ -199,6 +253,17 @@ class Range
         {
             //Console.WriteLine($"Yes it is now, {destination + (value - source)}");
             return destination + (value - source); 
+        }
+        return value;
+    }
+
+    public Int64 SourceRange(Int64 value)
+    {
+        //Console.WriteLine($"Checking if {value} is between {destination} and {destination + end - source}");
+        if (destination <= value && value <= destination + (end - source))
+        {
+            //Console.WriteLine($"Yes it is now, {source + (value - destination)}");
+            return source + (value - destination);
         }
         return value;
     }
@@ -223,6 +288,19 @@ class RangeList
             if (val != value) {
                 //Console.WriteLine("Hit");
                 return val; 
+            }
+        }
+        return value;
+    }
+    public Int64 SourceRange(Int64 value)
+    {
+        for (int i = 0; i < ranges.Count; i++)
+        {
+            var val = ranges[i].SourceRange(value);
+            if (val != value)
+            {
+                //Console.WriteLine("Hit");
+                return val;
             }
         }
         return value;
