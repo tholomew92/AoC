@@ -1,0 +1,15 @@
+C:\AoC\AoC\2023\8\aoc-2023-8\bin\Debug\net7.0\aoc-2023-8.exe
+C:\AoC\AoC\2023\8\aoc-2023-8\bin\Debug\net7.0\aoc-2023-8.deps.json
+C:\AoC\AoC\2023\8\aoc-2023-8\bin\Debug\net7.0\aoc-2023-8.runtimeconfig.json
+C:\AoC\AoC\2023\8\aoc-2023-8\bin\Debug\net7.0\aoc-2023-8.dll
+C:\AoC\AoC\2023\8\aoc-2023-8\bin\Debug\net7.0\aoc-2023-8.pdb
+C:\AoC\AoC\2023\8\aoc-2023-8\obj\Debug\net7.0\aoc-2023-8.GeneratedMSBuildEditorConfig.editorconfig
+C:\AoC\AoC\2023\8\aoc-2023-8\obj\Debug\net7.0\aoc-2023-8.AssemblyInfoInputs.cache
+C:\AoC\AoC\2023\8\aoc-2023-8\obj\Debug\net7.0\aoc-2023-8.AssemblyInfo.cs
+C:\AoC\AoC\2023\8\aoc-2023-8\obj\Debug\net7.0\aoc-2023-8.csproj.CoreCompileInputs.cache
+C:\AoC\AoC\2023\8\aoc-2023-8\obj\Debug\net7.0\aoc-2023-8.sourcelink.json
+C:\AoC\AoC\2023\8\aoc-2023-8\obj\Debug\net7.0\aoc-2023-8.dll
+C:\AoC\AoC\2023\8\aoc-2023-8\obj\Debug\net7.0\refint\aoc-2023-8.dll
+C:\AoC\AoC\2023\8\aoc-2023-8\obj\Debug\net7.0\aoc-2023-8.pdb
+C:\AoC\AoC\2023\8\aoc-2023-8\obj\Debug\net7.0\aoc-2023-8.genruntimeconfig.cache
+C:\AoC\AoC\2023\8\aoc-2023-8\obj\Debug\net7.0\ref\aoc-2023-8.dll
