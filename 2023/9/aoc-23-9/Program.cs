@@ -23,11 +23,7 @@ foreach (var line in input)
     var split = line.Split(" ", StringSplitOptions.TrimEntries).ToList();
     var ints = new List<int>();
     foreach(var s in split) ints.Add(int.Parse(s));
-    var temp = PartOne(ints);
-    partOne += temp + ints.Last();
-    /*Console.WriteLine(temp + " + " + ints.Last() + " = " + (temp+ints.Last()));
-    Console.WriteLine();
-    Console.WriteLine();*/
+    partOne += PartOne(ints) + ints.Last();
 }
 
 var timeOne = watch.Elapsed - parse;
@@ -37,11 +33,7 @@ foreach (var line in input)
     var split = line.Split(" ", StringSplitOptions.TrimEntries).ToList();
     var ints = new List<int>();
     foreach (var s in split) ints.Add(int.Parse(s));
-    var temp = PartTwo(ints);
-    partTwo += ints.First() - temp;
-    /*Console.WriteLine(ints.First() + " - " + temp + " = " + (ints.First()-temp));
-    Console.WriteLine();
-    Console.WriteLine();*/
+    partTwo += ints.First() - PartTwo(ints);
 }
 
 var timeTwo = watch.Elapsed - timeOne - parse;
@@ -79,41 +71,24 @@ string FormattedTime(TimeSpan ts)
 int PartOne(List<int> list)
 {
     var newList = new List<int>();
-    var check = true;
     for(int i = 0; i < list.Count - 1; i++)
     {
         var val = list[i+1] - list[i];
         newList.Add(val);
     }
 
-    //foreach(var n in newList) Console.Write(n + " ");
-
-    if (!newList.All(n => n == 0))
-    {
-        //Console.WriteLine();
-        return newList[newList.Count() - 1] + PartOne(newList);
-    }
-    //Console.WriteLine();
+    if (!newList.All(n => n == 0)) return newList[newList.Count() - 1] + PartOne(newList);
     return 0;
 }
 
 int PartTwo(List<int> list)
 {
     var newList = new List<int>();
-    var check = true;
     for (int i = 0; i < list.Count - 1; i++)
     {
         var val = list[i + 1] - list[i];
         newList.Add(val);
     }
-
-    //foreach(var n in newList) Console.Write(n + " ");
-
-    if (!newList.All(n => n == 0))
-    {
-        //Console.WriteLine();
-        return newList.FirstOrDefault() - PartTwo(newList);
-    }
-    //Console.WriteLine();
+    if (!newList.All(n => n == 0)) return newList.FirstOrDefault() - PartTwo(newList);
     return 0;
 }
