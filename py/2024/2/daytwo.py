@@ -10,7 +10,7 @@ lines = inputfile.readlines()
 partone = 0
 parttwo = 0
 
-def validate_parttwoty(split):
+def validate_safety(split):
     inc = 0
     dec = 0
     last = len(split) - 2
@@ -53,11 +53,11 @@ def validate_parttwoty(split):
     return -1
 for line in lines:
     split = line.split(' ')
-    res = validate_parttwoty(split)
+    res = validate_safety(split)
     if res != -1:
         resone = res
         del split[res]
-        res = validate_parttwoty(split)
+        res = validate_safety(split)
     else:
         partone = partone + 1
     if res == -1:
