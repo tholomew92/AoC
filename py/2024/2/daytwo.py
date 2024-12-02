@@ -1,5 +1,6 @@
 import os
-
+import time
+start = time.perf_counter()
 here = os.path.dirname(os.path.abspath(__file__))
 testfilepath = os.path.join(here, "test.txt")
 testfile = open(testfilepath, "r")
@@ -63,6 +64,8 @@ for line in lines:
     if res == -1:
         parttwo = parttwo + 1
 
+end = time.perf_counter()
 print(f"Part One: {partone}")
 print(f"Part Two: {parttwo}")
+print(f"Runtime is {(end - start) * 1000:,}")
 
