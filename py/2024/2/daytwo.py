@@ -8,30 +8,29 @@ inputfile = open(inputfilepath, "r")
 
 lines = inputfile.readlines()
 partone = 0
-safe = 0
+parttwo = 0
 
-def validate_safety(split):
+def validate_parttwoty(split):
     inc = 0
     dec = 0
+    last = len(split) - 2
     for x in range(0,len(split)-1):
         this = int(split[x])
         next = int(split[x+1])
-        if x < len(split) - 2:
+        if x < last:
             nextnext = int(split[x+2])
-            print(f"This: {this}, Next: {next}, Nextnext: {nextnext}")
-        diff = abs(next - this)
-        if diff < 1  or diff > 3:
             nextdiff = abs(nextnext - this)
-            print(f"{this} - {nextnext} equals")
-            print(nextdiff)
-            if x == len(split) - 2:
+        diff = abs(next - this)
+        saferen = range(1,4)
+        if diff not in saferen:
+            if x == last:
                 return x + 1
-            elif nextdiff >= 1 and nextdiff <= 3:
+            elif nextdiff in saferen:
                 return x + 1
             return x
         if this < next:
             inc = inc + 1
-        elif this > next:
+        else:
             dec = dec + 1
         if inc > 0 and dec > 0:
             if x == 1 and len(split) > 3:
@@ -52,24 +51,18 @@ def validate_safety(split):
                     return x + 1
             return x
     return -1
-debug = True
 for line in lines:
     split = line.split(' ')
-    res = validate_safety(split)
+    res = validate_parttwoty(split)
     if res != -1:
         resone = res
         del split[res]
-        res = validate_safety(split)
-        if res != -1 and debug:
-            print(line.strip())
-            print(resone)
-            print(res)
-            print()
+        res = validate_parttwoty(split)
     else:
         partone = partone + 1
     if res == -1:
-        safe = safe + 1
+        parttwo = parttwo + 1
 
 print(f"Part One: {partone}")
-print(f"Part Two: {safe}")
+print(f"Part Two: {parttwo}")
 
