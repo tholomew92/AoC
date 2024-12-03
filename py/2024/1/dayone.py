@@ -27,14 +27,10 @@ diff = 0
 sym = 0
 ind = 0
 
-for ro in rocc:
-    print(f"{ro} has {rocc[ro]}")
-
 for l in left:
     absval = abs(right[ind] - left[ind])
     diff = diff + absval
     if l in rocc:
-        #print("hit")
         sym = sym + (l * rocc.get(l))
     ind = ind + 1
 
