@@ -15,9 +15,9 @@ def validate_safety(split):
     for x in range(0,len(split)-1):
         this = int(split[x])
         next = int(split[x+1])
-        diff = abs(next - this)
+        diff = next - this
         saferen = range(1,4)
-        if diff not in saferen:
+        if abs(diff) not in saferen:
             return False
         if this < next:
             inc = inc + 1
