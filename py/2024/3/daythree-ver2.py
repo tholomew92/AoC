@@ -1,6 +1,6 @@
 import os
 import re
-import ast
+
 here = os.path.dirname(os.path.abspath(__file__))
 testfilepath = os.path.join(here, "test.txt")
 testfile = open(testfilepath, "r")
