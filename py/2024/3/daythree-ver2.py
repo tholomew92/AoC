@@ -10,9 +10,9 @@ inputfile = open(inputfilepath, "r")
 data = inputfile.read()
 findpattern = r"mul\((-?\d+),\s*(-?\d+)\)"
 removepattern = r"don't\(\).*?do\(\)"
-matchesone = [(int(x), int(y)) for x, y in re.findall(findpattern, data)]
+matchesone = [(int(a), int(b)) for a, b in re.findall(findpattern, data)]
 removed = re.sub(removepattern, "", data, flags=re.DOTALL)
-matchestwo = [(int(x), int(y)) for x, y in re.findall(findpattern, removed)]
+matchestwo = [(int(a), int(b)) for a, b in re.findall(findpattern, removed)]
 
 partone = sum(a * b for a,b in matchesone)
 parttwo = sum(a * b for a,b in matchestwo)
