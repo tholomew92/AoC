@@ -1,26 +1,21 @@
 import os
 import re
+
 here = os.path.dirname(os.path.abspath(__file__))
 testfilepath = os.path.join(here, "test.txt")
 testfile = open(testfilepath, "r")
 inputfilepath = os.path.join(here, "input.txt")
 inputfile = open(inputfilepath, "r")
 
-def get_matches(matches):
-    res = 0
-    for match in matches:
-        res = int(match[0]) * int(match[1]) + res
-    return res 
-
 data = inputfile.read()
 findpattern = r"mul\((-?\d+),\s*(-?\d+)\)"
 removepattern = r"don't\(\).*?do\(\)"
-matchesone = re.findall(findpattern, data)
+matchesone = [(int(a), int(b)) for a, b in re.findall(findpattern, data)]
 removed = re.sub(removepattern, "", data, flags=re.DOTALL)
-matchestwo = re.findall(findpattern, removed)
+matchestwo = [(int(a), int(b)) for a, b in re.findall(findpattern, removed)]
 
-partone = get_matches(matchesone)
-parttwo = get_matches(matchestwo)
+partone = sum(a * b for a,b in matchesone)
+parttwo = sum(a * b for a,b in matchestwo)
 
 print(f"Part One: {partone}")
 print(f"Part Two: {parttwo}")
