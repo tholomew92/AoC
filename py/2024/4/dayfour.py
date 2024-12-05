@@ -1,4 +1,5 @@
 import os
+
 here = os.path.dirname(os.path.abspath(__file__))
 testfilepath = os.path.join(here, "test.txt")
 testfile = open(testfilepath, "r")
@@ -31,7 +32,7 @@ hitsone = ["XMAS", "SAMX"]
 hitstwo = ["MAS", "SAM"]
 for x in range(0, len(data)):
     for y in range(0, len(data[x].strip())):
-
+        
         # Part One
         if y < len(data[x].strip()) - 3:
             substr = data[x][y:y+4]
