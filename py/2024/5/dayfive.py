@@ -37,7 +37,6 @@ for d in data:
         if index == -1:
             partone = partone + int(pages[ind])
         else:
-            incorrect = True
             copy = pages.copy()
             while True:
                 done = False
