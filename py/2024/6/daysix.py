@@ -13,7 +13,6 @@ minx, maxx = 0, len(data) - 1
 miny, maxy = 0, len(data[0]) - 1
 dir = ''
 startdir = ''
-dictt = dict()
 
 
 def turn(currdir):
@@ -70,26 +69,29 @@ for p in positions:
     pos = startpos
     dir = startdir
     copy = data.copy()
-    turns = []
+    x,y = p
+    substr = copy[x][:y] + "#" + copy[x][y+1:]
+    copy[x] = substr
     loop = False
+    tdict = dict()
     while True:
+        if pos not in tdict:
+            tdict[pos] = []
+        if dir in tdict[pos]:
+            loop = True
+            break
+        tdict[pos].append(dir)
         nextx, nexty = nextpos(pos, dir)
         if nextx < minx or nextx > maxx or nexty < miny or nexty > maxy:
             break
-        elif (nextx, nexty) == p or copy[nextx][nexty] == '#':
-            #print(pos)
-            turns.append((pos, dir))
-            #print(len(turns))
+        nextobj = copy[nextx][nexty]
+        while nextobj == '#':
             dir = turn(dir)
-            nextx, nexty = nextpos(pos, dir)  
+            nextx, nexty = nextpos(pos, dir)
+            nextobj = copy[nextx][nexty]  
         pos = nextx, nexty
 
-        if (pos,dir) in turns:
-            loop = True
-            break
-
     if loop:
-        #print(p)
         parttwo = parttwo + 1
     prevpos = p
 
