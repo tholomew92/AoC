@@ -7,11 +7,14 @@ data = [line.rstrip() for line in open(inputfilepath)]
 
 positions = []
 pos = 0,0
+startpos = 0,0
 dirs = ['^', '>', 'v', '<']
 minx, maxx = 0, len(data) - 1
 miny, maxy = 0, len(data[0]) - 1
 dir = ''
+startdir = ''
 dictt = dict()
+
 
 def turn(currdir):
     index = dirs.index(currdir)
@@ -39,28 +42,56 @@ for x in range(len(data)):
     for y in range(len(line)):
         if line[y] in dirs:
             dir = line[y]
+            startdir = line[y]
             pos = (x,y)
+            startpos = (x,y)
             found = True
             break
     if found:
         break
-print(pos)
-print(dir)
-max = 500
-start = 0
-while start < max:
-    #print(pos)
+
+while True:
     if pos not in positions:
         positions.append(pos)
     nextx, nexty = nextpos(pos, dir)
-    if nextx < minx or nextx > maxx or nexty < miny or nexty > maxy or data[nextx][nexty] == '#':
+    if nextx < minx or nextx > maxx or nexty < miny or nexty > maxy:
+        break
+    elif data[nextx][nexty] == '#':
         dir = turn(dir)
-        nextx, nexty = nextpos(pos, dir)    
-        print(f"Turning from {pos} to ({nextx}, {nexty}), maxx is {maxx} and maxy is {maxy} nextpos has {data[nextx][nexty]}")
-        if nextx < minx or nextx > maxx or nexty < miny or nexty > maxy or data[nextx][nexty] == '#':
-            break
-    
+        nextx, nexty = nextpos(pos, dir)  
     pos = nextx, nexty
-    start = start + 1
+
+parttwo = 0
+
+prevpos = startpos
+for p in positions:
+    if p == startpos:
+        continue
+    pos = startpos
+    dir = startdir
+    copy = data.copy()
+    turns = []
+    loop = False
+    while True:
+        nextx, nexty = nextpos(pos, dir)
+        if nextx < minx or nextx > maxx or nexty < miny or nexty > maxy:
+            break
+        elif (nextx, nexty) == p or copy[nextx][nexty] == '#':
+            #print(pos)
+            turns.append((pos, dir))
+            #print(len(turns))
+            dir = turn(dir)
+            nextx, nexty = nextpos(pos, dir)  
+        pos = nextx, nexty
+
+        if (pos,dir) in turns:
+            loop = True
+            break
+
+    if loop:
+        #print(p)
+        parttwo = parttwo + 1
+    prevpos = p
 
 print(len(positions))
+print(parttwo)
