@@ -1,5 +1,6 @@
 import os
 import time
+from concurrent.futures import ProcessPoolExecutor 
 
 start_time = time.time()
 
@@ -56,6 +57,17 @@ def walkthrough(pos, dir, data, tdict):
         pos = nextx, nexty
     return 0
 
+def parttwo_walktrough(p, startpos, startdir, data):
+    if p == startpos:
+        return 0
+    dir = startdir
+    copy = [list(row) for row in data]
+    x,y = p
+    copy[x][y] = '#'
+    local_tdict = {}
+    loop = walkthrough(startpos, dir, copy, local_tdict)
+    return loop
+
 for x in range(len(data)):
     line = data[x]
     found = False 
@@ -75,22 +87,17 @@ walkthrough(startpos, startdir, data,  tdict)
 for k in tdict:
     positions.append(k)
 
-
 parttwo = 0
 
-for p in positions:
-    if p == startpos:
-        continue
-    dir = startdir
-    copy = [list(row) for row in data]
-    x,y = p
-    copy[x][y] = '#'
-    local_tdict = {}
-    loop = walkthrough(startpos, dir, copy, local_tdict)
-    parttwo += loop
+if __name__ == "__main__":
+    with ProcessPoolExecutor(max_workers=8) as executor:
+        results = list(executor.map(parttwo_walktrough, positions, [startpos]*len(positions), [startdir]*len(positions), [data]*len(positions)))
 
-end_time = time.time()
-total_time = end_time - start_time
-print(f"Part One: {len(positions)}")
-print(f"Part Two: {parttwo}")
-print(f"Time run: {total_time}")
+
+    parttwo = sum(results)
+
+    end_time = time.time()
+    total_time = end_time - start_time
+    print(f"Part One: {len(positions)}")
+    print(f"Part Two: {parttwo}")
+    print(f"Time run: {total_time}")
