@@ -12,13 +12,23 @@ inputfilepath = os.path.join(here, "input.txt")
 data = [line.rstrip() for line in open(inputfilepath)]
 
 tdict = {}
-pos = 0,0
 startpos = 0,0
 startdir = ''
 dirs = ['^', '>', 'v', '<']
 xrange = range(0, len(data))
 yrange= range(0, len(data[0]))
 
+for x in range(len(data)):
+    line = data[x]
+    found = False 
+    for y in range(len(line)):
+        if line[y] in dirs:
+            startdir = line[y]
+            startpos = (x,y)
+            found = True
+            break
+    if found:
+        break
 
 def turn(currdir):
     index = dirs.index(currdir)
@@ -68,23 +78,8 @@ def parttwo_walktrough(p, startpos, startdir, data):
     loop = walkthrough(startpos, dir, copy, local_tdict)
     return loop
 
-for x in range(len(data)):
-    line = data[x]
-    found = False 
-    for y in range(len(line)):
-        if line[y] in dirs:
-            dir = line[y]
-            startdir = line[y]
-            pos = (x,y)
-            startpos = (x,y)
-            found = True
-            break
-    if found:
-        break
-
 
 if __name__ == "__main__":
-
         
     walkthrough(startpos, startdir, data,  tdict)
     
