@@ -2,6 +2,7 @@ import os
 import time
 from concurrent.futures import ProcessPoolExecutor 
 
+    
 start_time = time.time()
 
 here = os.path.dirname(os.path.abspath(__file__))
@@ -11,7 +12,6 @@ inputfilepath = os.path.join(here, "input.txt")
 data = [line.rstrip() for line in open(inputfilepath)]
 
 tdict = {}
-positions = []
 pos = 0,0
 startpos = 0,0
 startdir = ''
@@ -82,22 +82,28 @@ for x in range(len(data)):
     if found:
         break
 
-walkthrough(startpos, startdir, data,  tdict)
-
-for k in tdict:
-    positions.append(k)
-
-parttwo = 0
 
 if __name__ == "__main__":
-    with ProcessPoolExecutor(max_workers=8) as executor:
-        results = list(executor.map(parttwo_walktrough, positions, [startpos]*len(positions), [startdir]*len(positions), [data]*len(positions)))
+
+        
+    walkthrough(startpos, startdir, data,  tdict)
+    
+    positions = []
+    for k in tdict:
+        positions.append(k)
+    partone_time = time.time() - start_time
+
+    print(f"Part One: {len(positions)}. It took {partone_time*1000:.3f} ms")
 
 
-    parttwo = sum(results)
+    for x in range(1,21):
+        parttwo_start = time.time()
+        parttwo = 0
+        with ProcessPoolExecutor(max_workers=x) as executor:
+            results = list(executor.map(parttwo_walktrough, positions, [startpos]*len(positions), [startdir]*len(positions), [data]*len(positions)))
 
-    end_time = time.time()
-    total_time = end_time - start_time
-    print(f"Part One: {len(positions)}")
-    print(f"Part Two: {parttwo}")
-    print(f"Time run: {total_time}")
+
+        parttwo = sum(results)
+        parttwo_stop = time.time() - parttwo_start
+        print(f"Part Two: {parttwo}. It took {parttwo_stop:.3f} sec with {x} work(er)")
+    
