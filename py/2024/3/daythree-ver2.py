@@ -8,7 +8,7 @@ inputfilepath = os.path.join(here, "input.txt")
 inputfile = open(inputfilepath, "r")
 
 data = inputfile.read()
-findpattern = r"mul\((-?\d+),\s*(-?\d+)\)"
+findpattern = r"mul\((\d{1,3}),\s*(\d{1,3})\)"
 removepattern = r"don't\(\).*?do\(\)"
 matchesone = [(int(a), int(b)) for a, b in re.findall(findpattern, data)]
 removed = re.sub(removepattern, "", data, flags=re.DOTALL)
