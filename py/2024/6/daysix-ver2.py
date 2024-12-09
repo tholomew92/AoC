@@ -85,6 +85,8 @@ for x in range(len(data)):
 
 walkthrough(startpos, startdir, data,  tdict)
 
+partone_time = time.time() - start_time
+
 positions = tdict.keys()
 
 parttwo = 0
@@ -101,9 +103,6 @@ for p in positions:
     loop = walkthrough(prevpos, dir, copy, {})
     parttwo += loop
     prevpos = p
-
-end_time = time.time()
-total_time = end_time - start_time
-print(f"Part One: {len(positions)}")
-print(f"Part Two: {parttwo}")
-print(f"Time run: {total_time}")
+    
+print(f"Part One: {len(positions)} and took {partone_time*1000:2f} ms")
+print(f"Part Two: {parttwo} and took {time.time() - start_time:2f} sec")

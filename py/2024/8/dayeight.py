@@ -83,5 +83,7 @@ for x in antinodes:
     p1 += len(antinodes[x])
 
 parttwo.update(partone)
+end_time = time.time() - start_time
 print(len(partone))
 print(len(parttwo))
+print(f"Time taken is {end_time*1000:2f} ms")

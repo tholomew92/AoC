@@ -83,7 +83,6 @@ def walkthrough(pos, dir, data, tdict):
     return 0
 
 def parttwo_walktrough(p, startpos, data):
-    print(f"{p} vs {startpos}")
     if p == startpos:
         return 0
     start = prevposdict[p]
@@ -121,8 +120,8 @@ if __name__ == "__main__":
     for x in range(1,21):
         parttwo_start = time.time()
         parttwo = 0
-        #with ProcessPoolExecutor(max_workers=x) as executor:
-            #results = list(executor.map(parttwo_walktrough, positions, [startpos]*len(positions), [data]*len(positions)))
+        with ProcessPoolExecutor(max_workers=x) as executor:
+            results = list(executor.map(parttwo_walktrough, positions, [startpos]*len(positions), [data]*len(positions)))
 
 
         parttwo = sum(results)
