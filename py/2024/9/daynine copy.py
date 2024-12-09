@@ -1,5 +1,6 @@
 import os
 import time
+from copy import deepcopy
 
 start_time = time.time()
 
@@ -7,7 +8,7 @@ here = os.path.dirname(os.path.abspath(__file__))
 testfilepath = os.path.join(here, "test.txt")
 inputfilepath = os.path.join(here, "input.txt")
 
-file = [line.rstrip() for line in open(testfilepath)]
+file = [line.rstrip() for line in open(inputfilepath)]
 data = file[0]
 
 blocklist = []
@@ -23,13 +24,9 @@ for i in range(len(data)):
             tdict['.'] = int(data[i])
             blocklist.append(tdict)
 
-p1copy = []
-p2copy = []
 
-for block in blocklist:
-    p1copy.append(block)
-    p2copy.append(block)
-
+p1copy = deepcopy(blocklist)
+p2copy = deepcopy(blocklist)
 
 # Part One
 
@@ -37,7 +34,7 @@ backind = len(p1copy) - 1
 p1list = []
 ind = 0
 
-for block in blocklist:
+for block in p1copy:
     if ind > backind:
         break
     key = next(iter(block))
@@ -70,25 +67,45 @@ p1_time = time.time() - start_time
 # Part Two
 
 backind = len(p2copy) - 1
-p2list = []
 ind = 0
+p2list = []
 
+for block in p2copy:
+    key = next(iter(block))
+    for b in range(block[key]):
+        p2list.append(key)
 
-for i in range(len(blocklist)):
-    
-            
+for i in reversed(range(len(p2copy))):
+    block = p2copy[i]
+    key = next(iter(block))
+    if key == '.':
+        continue
+    length = block[key]
+    endind = -1
+    startind = -1
+    for j in reversed(range(len(p2list))):
+        if p2list[j] == key:
+            endind = j + 1
+            startind = endind - length
+            break
+    dotset = set()
+    for k in range(len(p2list)):
+        if k > startind:
+            break
+        if p2list[k] == '.':
+            dotjoin = ''.join(str(s) for s in p2list[k:k+length])
+            dotset = set(dotjoin)
+            if len(dotset) == 1:
+                p2list[k:k+length] = [key] * ((k+length) - k)
+                p2list[startind:endind] = ['.'] * (endind - startind)
+                break
+
 p2 = 0
-p2str = ""
 
-for val in p2list:
+for i in range(len(p2list)):
+    val = p2list[i]
     if val != '.':
-        p2str += str(val)
-    else:
-        p2str += val
-print(p2str)
-for i in range(len(p2str)):
-    if p2str[i] != '.':
-        p2 += i * int(p2str[i])
+        p2 += val * i
 
 p2_time = time.time() - start_time
 
