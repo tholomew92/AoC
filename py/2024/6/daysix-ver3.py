@@ -12,8 +12,10 @@ inputfilepath = os.path.join(here, "input.txt")
 data = [line.rstrip() for line in open(inputfilepath)]
 
 tdict = {}
+prevposdict = {}
 startpos = 0,0
 startdir = ''
+prevpos = 0,0
 dirs = ['^', '>', 'v', '<']
 xrange = range(0, len(data))
 yrange= range(0, len(data[0]))
@@ -29,6 +31,19 @@ for x in range(len(data)):
             break
     if found:
         break
+
+def getdir(currpos, prevpos):
+    cx, cy = currpos
+    px, py = prevpos
+    if cx < px:
+        return '^'
+    elif cx > px:
+        return 'v'
+    elif cy < py:
+        return '<'
+    elif cy > py:
+        return '>'
+    return ''
 
 def turn(currdir):
     index = dirs.index(currdir)
@@ -67,15 +82,20 @@ def walkthrough(pos, dir, data, tdict):
         pos = nextx, nexty
     return 0
 
-def parttwo_walktrough(p, startpos, startdir, data):
+def parttwo_walktrough(p, startpos, data):
+    print(f"{p} vs {startpos}")
     if p == startpos:
         return 0
-    dir = startdir
+    start = prevposdict[p]
+    dir = getdir(p, start)
+    if p in prevposdict:
+        start = prevposdict[p]
+        dir = getdir(p, start)
     copy = [list(row) for row in data]
     x,y = p
     copy[x][y] = '#'
     local_tdict = {}
-    loop = walkthrough(startpos, dir, copy, local_tdict)
+    loop = walkthrough(start, dir, copy, local_tdict)
     return loop
 
 
@@ -84,18 +104,25 @@ if __name__ == "__main__":
     walkthrough(startpos, startdir, data,  tdict)
     
     positions = []
+    prevpos = (-1,-1)
     for k in tdict:
         positions.append(k)
+        if k == startpos:
+            prevpos = startpos
+        prevposdict[k] = prevpos
+        print(f"Added {prevpos} as prevpos to {k}")
+        if len(prevposdict) > 50:
+            break
+        prevpos = k
+    
     partone_time = time.time() - start_time
 
     print(f"Part One: {len(positions)}. It took {partone_time*1000:.3f} ms")
-
-
     for x in range(1,21):
         parttwo_start = time.time()
         parttwo = 0
-        with ProcessPoolExecutor(max_workers=x) as executor:
-            results = list(executor.map(parttwo_walktrough, positions, [startpos]*len(positions), [startdir]*len(positions), [data]*len(positions)))
+        #with ProcessPoolExecutor(max_workers=x) as executor:
+            #results = list(executor.map(parttwo_walktrough, positions, [startpos]*len(positions), [data]*len(positions)))
 
 
         parttwo = sum(results)

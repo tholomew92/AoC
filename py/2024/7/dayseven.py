@@ -8,7 +8,7 @@ here = os.path.dirname(os.path.abspath(__file__))
 testfilepath = os.path.join(here, "test.txt")
 inputfilepath = os.path.join(here, "input.txt")
 
-data = [line.rstrip() for line in open(testfilepath)]
+data = [line.rstrip() for line in open(inputfilepath)]
 
 partone = 0
 parttwo = 0

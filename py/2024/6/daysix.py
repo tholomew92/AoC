@@ -1,4 +1,8 @@
 import os
+import time
+
+start_time = time.time()
+
 here = os.path.dirname(os.path.abspath(__file__))
 testfilepath = os.path.join(here, "test.txt")
 inputfilepath = os.path.join(here, "input.txt")
@@ -14,6 +18,18 @@ miny, maxy = 0, len(data[0]) - 1
 dir = ''
 startdir = ''
 
+def getdir(currpos, prevpos):
+    cx, cy = currpos
+    px, py = prevpos
+    if cx < px:
+        return '^'
+    elif cx > px:
+        return 'v'
+    elif cy < py:
+        return '<'
+    elif cy > py:
+        return '>'
+    return ''
 
 def turn(currdir):
     index = dirs.index(currdir)
@@ -63,11 +79,12 @@ while True:
 parttwo = 0
 
 prevpos = startpos
+
 for p in positions:
     if p == startpos:
         continue
-    pos = startpos
-    dir = startdir
+    pos = prevpos
+    dir = getdir(p, prevpos)
     copy = data.copy()
     x,y = p
     substr = copy[x][:y] + "#" + copy[x][y+1:]
@@ -94,6 +111,9 @@ for p in positions:
     if loop:
         parttwo = parttwo + 1
     prevpos = p
-
-print(len(positions))
-print(parttwo)
+    
+end_time = time.time()
+total_time = end_time - start_time
+print(f"Part One: {len(positions)}")
+print(f"Part Two: {parttwo}")
+print(f"Time run: {total_time}")

@@ -10,6 +10,7 @@ inputfilepath = os.path.join(here, "input.txt")
 data = [line.rstrip() for line in open(inputfilepath)]
 
 tdict = {}
+prevposmap = {}
 positions = []
 pos = 0,0
 startpos = 0,0
@@ -18,6 +19,18 @@ dirs = ['^', '>', 'v', '<']
 xrange = range(0, len(data))
 yrange= range(0, len(data[0]))
 
+def getdir(currpos, prevpos):
+    cx, cy = currpos
+    px, py = prevpos
+    if cx < px:
+        return '^'
+    elif cx > px:
+        return 'v'
+    elif cy < py:
+        return '<'
+    elif cy > py:
+        return '>'
+    return ''
 
 def turn(currdir):
     index = dirs.index(currdir)
@@ -72,22 +85,22 @@ for x in range(len(data)):
 
 walkthrough(startpos, startdir, data,  tdict)
 
-for k in tdict:
-    positions.append(k)
-
+positions = tdict.keys()
 
 parttwo = 0
-
+prevpos = startpos
+prevdir = ''
 for p in positions:
     if p == startpos:
         continue
-    dir = startdir
+    dir = getdir(p, prevpos)
     copy = [list(row) for row in data]
     x,y = p
     copy[x][y] = '#'
     local_tdict = {}
-    loop = walkthrough(startpos, dir, copy, local_tdict)
+    loop = walkthrough(prevpos, dir, copy, {})
     parttwo += loop
+    prevpos = p
 
 end_time = time.time()
 total_time = end_time - start_time
