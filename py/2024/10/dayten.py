@@ -7,7 +7,7 @@ here = os.path.dirname(os.path.abspath(__file__))
 testfilepath = os.path.join(here, "test.txt")
 inputfilepath = os.path.join(here, "input.txt")
 
-data = [line.rstrip() for line in open(testfilepath)]
+data = [line.rstrip() for line in open(inputfilepath)]
 
 positions = []
 trailheads = []
@@ -15,7 +15,8 @@ completepaths = []
 dirs = ((-1, 0),(1, 0),(0, -1),(0, 1))
 xrange = range(0, len(data))
 yrange = range(0, len(data[0]))
-scores = dict()
+partonescores = dict()
+parttwoscores = dict()
 
 def find_path(pos, path):
     x, y = pos
@@ -24,11 +25,11 @@ def find_path(pos, path):
         return path
     paths = []
     for d in dirs:
-        nx, ny = d
-        if x+nx not in xrange or y+ny not in yrange:
+        dx, dy = d
+        if x+dx not in xrange or y+dy not in yrange:
             continue
-        nexpos = int(data[x+nx][y+ny])
-        npos = (x+nx,y+ny)
+        nexpos = int(data[x+dx][y+dy])
+        npos = (x+dx,y+dy)
         if nexpos - curpos == 1:
             paths += find_path(npos, path + [npos])
     return paths
@@ -39,9 +40,27 @@ for x in xrange:
             trailheads.append((x,y))
 
 for trailhead in trailheads:
-    print(trailhead)
-    score = 0
+    p1score = 0
+    p2score = 0
     paths = find_path(trailhead, [])
-    print(paths)
+    pset = set(paths)
+    for path in pset:
+        x, y = path
+        if data[x][y] == '9':
+            p1score += 1
+    partonescores[trailhead] = p1score
+    for path in paths:
+        x, y = path
+        if data[x][y] == '9':
+            p2score += 1
+    parttwoscores[trailhead] = p2score
 
-print(data[1][2])
+partone = 0
+for score in partonescores:
+    partone += partonescores[score]
+parttwo = 0
+for score in parttwoscores:
+    parttwo += parttwoscores[score]
+print(f"Part One: {partone} ms")
+print(f"Part Two: {parttwo} ms")
+print(f"Time taken is {time.time() - start_time}")
