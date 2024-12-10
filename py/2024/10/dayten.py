@@ -7,7 +7,7 @@ here = os.path.dirname(os.path.abspath(__file__))
 testfilepath = os.path.join(here, "test.txt")
 inputfilepath = os.path.join(here, "input.txt")
 
-data = [line.rstrip() for line in open(inputfilepath)]
+data = [line.rstrip() for line in open(testfilepath)]
 
 positions = []
 trailheads = []
@@ -61,6 +61,6 @@ for score in partonescores:
 parttwo = 0
 for score in parttwoscores:
     parttwo += parttwoscores[score]
-print(f"Part One: {partone} ms")
-print(f"Part Two: {parttwo} ms")
-print(f"Time taken is {time.time() - start_time}")
+print(f"Part One: {partone}")
+print(f"Part Two: {parttwo}")
+print(f"Time taken is {(time.time() - start_time) * 1000:2f} ms")
