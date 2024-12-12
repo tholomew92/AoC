@@ -33,6 +33,8 @@ def find_plot(pos, plot):
 
     return plot
 
+# Part One
+
 def find_edges(plot):
     count = 0
     for pos in plot:
@@ -46,24 +48,7 @@ def find_edges(plot):
                 count += 1
     return count
 
-def turn(pos, dirind):
-    x, y = pos
-    if dirind == 0:
-        dirind = 4
-    dirind -= 1
-    ndirind = -1
-    for i in range(len(dirs)):
-        dx, dy = dirs[dirind]
-        if x + dx in xrange and y + dy in yrange:
-            if data[x][y] == data[x + dx][y + dy]:
-                pos = (x+dx,y+dy)
-                ndirind = dirind
-                break
-        dirind += 1
-        if dirind == 4:
-            dirind = 0
-
-    return pos, ndirind
+# Part Two
 
 def find_sides(pos, plot):
 
