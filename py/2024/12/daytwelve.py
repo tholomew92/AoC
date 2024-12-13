@@ -33,26 +33,10 @@ def find_plot(pos, plot):
 
     return plot
 
-# Part One
-
-def find_edges(plot):
-    count = 0
-    for pos in plot:
-        x, y = pos
-        for d in dirs:
-            dx, dy = d
-            if dx + x in xrange and dy + y in yrange:
-                if data[x][y] != data[dx+x][dy+y]:
-                    count += 1
-            else:
-                count += 1
-    return count
-
-# Part Two
-
 def find_sides(pos, plot):
 
-    count = 0
+    countone = 0
+    counttwo = 0
     tx, ty = pos
     target = data[tx][ty]
     rowsstart = dict()
@@ -75,18 +59,18 @@ def find_sides(pos, plot):
                 rowsend[x].append(ey)
             
     for x in xrange:
+        countone += len(rowsstart[x])
+        countone += len(rowsend[x])
         if x == 0:
-            count += len(rowsstart[0])
-            count += len(rowsend[0])
+            counttwo += len(rowsstart[0])
+            counttwo += len(rowsend[0])
         else:
             for start in rowsstart[x]:
                 if start not in rowsstart[x - 1]:
-                    count += 1
+                    counttwo += 1
             for end in rowsend[x]:
                 if end not in rowsend[x - 1]:
-                    count += 1
-        
-    cv = count
+                    counttwo += 1
 
     for y in yrange:
         colsstart[y] = []
@@ -104,18 +88,20 @@ def find_sides(pos, plot):
                 colssend[y].append(ex)
 
     for y in yrange:
+        countone += len(colsstart[y])
+        countone += len(colssend[y])
         if y == 0:
-            count += len(colsstart[0])
-            count += len(colssend[0])
+            counttwo += len(colsstart[0])
+            counttwo += len(colssend[0])
         else:
             for start in colsstart[y]:
                 if start not in colsstart[y - 1]:
-                    count += 1
+                    counttwo += 1
             for end in colssend[y]:
                 if end not in colssend[y - 1]:
-                    count += 1
+                    counttwo += 1
    
-    return count
+    return countone, counttwo
 
 visited = set()
 plots = []
@@ -129,8 +115,9 @@ for x in range(len(data)):
         plot = find_plot(pos, set())
         visited.update(plot)
         plots.append(plot)
-        partone += find_edges(plot) * len(plot)
-        parttwo += find_sides(pos, plot) * len(plot)
+        totals = find_sides(pos, plot)
+        partone += totals[0] * len(plot)
+        parttwo += totals[1] * len(plot)
 
 end_time = time.time() - start_time
 
