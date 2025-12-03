@@ -1,5 +1,8 @@
 import os
 import math
+import time
+
+start_time = time.time()
 
 here = os.path.dirname(os.path.abspath(__file__))
 testfilepath = os.path.join(here, "test.txt")
@@ -21,6 +24,8 @@ def find_factors(num):
             factors.append(i)
             if i != num // i:
                 factors.append(num // i)
+    if num in factors:
+        factors.remove(num)
     return sorted(factors)
 
 p1 = 0
@@ -43,8 +48,6 @@ for idrange in idranges:
         if not parttwo:
             factors = find_factors(slen)
             for factor in factors:
-                if(factor == slen):
-                    continue
                 sets = [vstr[j:j+factor] for j in range(0, slen, factor)]
                 if len(set(sets)) == 1:
                     parttwo = True
@@ -52,5 +55,8 @@ for idrange in idranges:
         if parttwo:
             p2 += i
 
+end_time = time.time() - start_time
+
 print(f"Part one: {p1}")
 print(f"Part two: {p2}")
+print(f"Time taken: {end_time:3f} s")
