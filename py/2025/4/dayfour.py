@@ -7,13 +7,13 @@ here = os.path.dirname(os.path.abspath(__file__))
 testfilepath = os.path.join(here, "test.txt")
 inputfilepath = os.path.join(here, "input.txt")
 
-def check_neighbours(hpos, wpos):
+def check_neighbours(rolls, hpos, wpos):
     hits = 0
     minh = maxh = minw = maxw = -1
     if hpos == 0:
         minh = 0
     else:
-        minh = height - 1
+        minh = hpos - 1
     if hpos == height - 1:
         maxh = hpos + 1
     else:
@@ -31,22 +31,48 @@ def check_neighbours(hpos, wpos):
             if h == hpos and w == wpos:
                 continue
             else:
-                if data[h][w] == '@':             
+                
+                if rolls[h][w] == '@':
                     hits += 1
-                    if hits > 2:
-                        print(f"pos {hpos},{wpos}: {h},{w}")
     return hits
 
-data = [line.rstrip() for line in open(testfilepath)]
+def remove_rolls(rollmap):
+    hitpos = []
+    for h in range(height):
+        for w in range(width):
+            if rollmap[h][w] == '@':
+                if check_neighbours(rollmap, h, w) < 4:
+                    hitpos.append((h,w))
+    return hitpos
+
+data = [line.rstrip() for line in open(inputfilepath)]
+
 
 width = len(data[0])
 height = len(data)
 
-p1 = 0
-for h in range(height):
-    for w in range(width):
-        if data[h][w] == '@':
-            if check_neighbours(h, w) < 4:
-                p1 += 1
+first = True
+rolls = [list(s) for s in data]
 
-print(p1)
+p1 = 0
+p2 = 0
+
+loops = 0
+
+while True:
+    hits = remove_rolls(rolls)
+    if first:
+        p1 = len(hits)
+        first = False
+    if len(hits) == 0:
+        break
+    p2 += len(hits)
+    for h, w in hits:
+        rolls[h][w] = '.'
+
+
+end_time = time.time() - start_time
+
+print(f"Part one: {p1}")
+print(f"Part two: {p2}")
+print(f"Time taken: {end_time:3f} s")
